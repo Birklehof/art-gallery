@@ -1,21 +1,20 @@
 <script>
-	export var name = "Hi";
 </script>
 
 <main>
 	<div class="landing">
-		<img src={"assets/landing/landing.jpg"}>
+		<img src={"assets/landing/landing.jpg"} alt="Landing">
 		<h1>Willkommen zur Kunst Gallerie des Birklehof!</h1>
 	</div>
 	<div class="masonry">
 		{#each Array(11) as _, i}
 			<div class="item">
-				<img src={"assets/pictures/picture_" + (i+1).toString() + ".jpg"}>
+				<img src={"assets/pictures/picture_" + (i+1).toString() + ".jpg"} alt="Please wait ... ">
 			</div>
 		{/each}
 		{#each Array(6) as _, i}
 			<div class="item">
-				<img src={"assets/pictures/picture_" + (i+1).toString() + ".jpg"}>
+				<img src={"assets/pictures/picture_" + (i+1).toString() + ".jpg"} alt="Please wait ... ">
 			</div>
 		{/each}
 	</div>
