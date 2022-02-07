@@ -5,8 +5,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear --host",
-    "deploy": "node ./gh-pages.js"
+    "start": "sirv public --host -s",
+    "deploy": "git subtree push --prefix public/ origin gh-pages"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
@@ -20,6 +20,9 @@
   },
   "dependencies": {
     "gh-pages": "^3.2.3",
-    "sirv-cli": "^2.0.0"
+    "sirv-cli": "^2.0.0",
+    "svelte-icons": "^2.1.0",
+    "svelte-lazy": "^1.1.0",
+    "svelte-navigator": "^3.1.5"
   }
 }

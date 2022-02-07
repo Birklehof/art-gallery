@@ -1,21 +1,26 @@
 <script>
+	import { Router, Route, Link } from "svelte-navigator";
+	import Home from "./Home.svelte";
+	import Subject from "./Subject.svelte"
 </script>
 
-<main>
-	<div class="landing">
-		<img src={"assets/landing/landing.jpg"} alt="Landing">
-		<h1>Willkommen zur Kunst Gallerie des Birklehof!</h1>
+<Router>
+	<div class="toolbar">
+		<Link to="/">
+			<img id="logo" src="https://www.birklehof.de/wp-content/themes/birklehof-v2/img/birklehof-logo.png">
+		</Link>
 	</div>
-	<div class="masonry">
-		{#each Array(11) as _, i}
-			<div class="item">
-				<img src={"assets/pictures/picture_" + (i+1).toString() + ".jpg"} alt="Please wait ... ">
-			</div>
-		{/each}
-		{#each Array(6) as _, i}
-			<div class="item">
-				<img src={"assets/pictures/picture_" + (i+1).toString() + ".jpg"} alt="Please wait ... ">
-			</div>
-		{/each}
-	</div>
-</main>
+	<main>
+		<Route path="/">
+			<Home />
+		</Route>
+
+		<Route path="home">
+			<Home />
+		</Route>
+
+		<Route path="subject">
+			<Subject />
+		</Route>
+	</main>
+</Router>
