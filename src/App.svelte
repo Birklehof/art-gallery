@@ -1,26 +1,14 @@
 <script>
-	import { Router, Route, Link } from "svelte-navigator";
-	import Home from "./Home.svelte";
-	import Subject from "./Subject.svelte"
+	import Router from './routes/index.svelte';
+
+	function openInNewTab(url) {
+		window.open(url, '_blank').focus();
+	}
 </script>
 
-<Router>
+<main>
 	<div class="toolbar">
-		<Link to="/">
-			<img id="logo" src="https://www.birklehof.de/wp-content/themes/birklehof-v2/img/birklehof-logo.png">
-		</Link>
+		<img style="cursor: pointer" on:click={() => openInNewTab("https://www.birklehof.de/")} id="logo" src="https://www.birklehof.de/wp-content/themes/birklehof-v2/img/birklehof-logo.png">
 	</div>
-	<main>
-		<Route path="/">
-			<Home />
-		</Route>
-
-		<Route path="home">
-			<Home />
-		</Route>
-
-		<Route path="subject">
-			<Subject />
-		</Route>
-	</main>
-</Router>
+	<Router />
+</main>
