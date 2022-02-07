@@ -1,4 +1,5 @@
 <script>
+    import { Link } from "svelte-navigator";
     import IoIosArrowBack from 'svelte-icons/io/IoIosArrowBack.svelte';
     import IoIosArrowForward from 'svelte-icons/io/IoIosArrowForward.svelte';
     import IoIosClose from 'svelte-icons/io/IoIosClose.svelte';
@@ -34,6 +35,11 @@
   <div class="landing">
     <img src={"assets/landing/landing.jpg"} alt="Landing">
     <h1>Thema 1</h1>
+    <div>
+      <Link to="/" class="back-link">
+        <p>Zurück zur Übersicht</p>
+      </Link>
+    </div>
   </div>
   <div id="overlay">
     <div id="next_left" on:click={next_left}>
@@ -55,7 +61,7 @@
   </div>
   <div class="masonry">
     {#each Array(max_image_id) as _, i}
-      <div class="item" on:click={() => {show_image(i)}}>
+      <div class="item clickable" on:click={() => {show_image(i)}}>
         <Lazy height={300}>
           <img src={"assets/pictures/picture_" + (i+1).toString() + ".jpg"} alt="Please wait ... "/>
         </Lazy>
