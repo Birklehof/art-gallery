@@ -4525,8 +4525,8 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (16:10) <Lazy height={300}>
-    function create_default_slot_1$1(ctx) {
+    // (17:8) <Lazy height={300}>
+    function create_default_slot_1$2(ctx) {
     	let img;
     	let img_src_value;
 
@@ -4535,7 +4535,7 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "assets/pictures/picture_" + (/*i*/ ctx[3] + 1).toString() + ".jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Please wait ... ");
-    			add_location(img, file$6, 16, 12, 450);
+    			add_location(img, file$6, 17, 10, 544);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -4547,67 +4547,30 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$1.name,
+    		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(16:10) <Lazy height={300}>",
+    		source: "(17:8) <Lazy height={300}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (14:6) <Link to="/subject">
+    // (20:8) <Link to="/subject">
     function create_default_slot$5(ctx) {
-    	let div;
-    	let lazy;
-    	let t;
-    	let current;
-
-    	lazy = new Src({
-    			props: {
-    				height: 300,
-    				$$slots: { default: [create_default_slot_1$1] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
+    	let h2;
 
     	const block = {
     		c: function create() {
-    			div = element("div");
-    			create_component(lazy.$$.fragment);
-    			t = space();
-    			attr_dev(div, "class", "item");
-    			add_location(div, file$6, 14, 8, 389);
+    			h2 = element("h2");
+    			h2.textContent = "Thema 1";
+    			add_location(h2, file$6, 19, 28, 679);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			mount_component(lazy, div, null);
-    			insert_dev(target, t, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const lazy_changes = {};
-
-    			if (dirty & /*$$scope*/ 16) {
-    				lazy_changes.$$scope = { dirty, ctx };
-    			}
-
-    			lazy.$set(lazy_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(lazy.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(lazy.$$.fragment, local);
-    			current = false;
+    			insert_dev(target, h2, anchor);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
-    			destroy_component(lazy);
-    			if (detaching) detach_dev(t);
+    			if (detaching) detach_dev(h2);
     		}
     	};
 
@@ -4615,17 +4578,32 @@ var app = (function () {
     		block,
     		id: create_default_slot$5.name,
     		type: "slot",
-    		source: "(14:6) <Link to=\\\"/subject\\\">",
+    		source: "(20:8) <Link to=\\\"/subject\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (13:4) {#each Array(max_image_id) as _, i}
+    // (15:4) {#each Array(max_image_id) as _, i}
     function create_each_block$1(ctx) {
+    	let div;
+    	let lazy;
+    	let t0;
     	let link;
+    	let t1;
+    	let p;
+    	let t3;
     	let current;
+
+    	lazy = new Src({
+    			props: {
+    				height: 300,
+    				$$slots: { default: [create_default_slot_1$2] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
 
     	link = new Link$1({
     			props: {
@@ -4638,13 +4616,36 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			div = element("div");
+    			create_component(lazy.$$.fragment);
+    			t0 = space();
     			create_component(link.$$.fragment);
+    			t1 = space();
+    			p = element("p");
+    			p.textContent = "Eine kurze Beschreibung des Themas und der Klassen, die daran gearbeitet haben.";
+    			t3 = space();
+    			add_location(p, file$6, 20, 8, 711);
+    			attr_dev(div, "class", "item");
+    			add_location(div, file$6, 15, 6, 487);
     		},
     		m: function mount(target, anchor) {
-    			mount_component(link, target, anchor);
+    			insert_dev(target, div, anchor);
+    			mount_component(lazy, div, null);
+    			append_dev(div, t0);
+    			mount_component(link, div, null);
+    			append_dev(div, t1);
+    			append_dev(div, p);
+    			append_dev(div, t3);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
+    			const lazy_changes = {};
+
+    			if (dirty & /*$$scope*/ 16) {
+    				lazy_changes.$$scope = { dirty, ctx };
+    			}
+
+    			lazy.$set(lazy_changes);
     			const link_changes = {};
 
     			if (dirty & /*$$scope*/ 16) {
@@ -4655,15 +4656,19 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(lazy.$$.fragment, local);
     			transition_in(link.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
+    			transition_out(lazy.$$.fragment, local);
     			transition_out(link.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			destroy_component(link, detaching);
+    			if (detaching) detach_dev(div);
+    			destroy_component(lazy);
+    			destroy_component(link);
     		}
     	};
 
@@ -4671,7 +4676,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(13:4) {#each Array(max_image_id) as _, i}",
+    		source: "(15:4) {#each Array(max_image_id) as _, i}",
     		ctx
     	});
 
@@ -4684,8 +4689,12 @@ var app = (function () {
     	let img;
     	let img_src_value;
     	let t0;
-    	let h1;
+    	let h10;
     	let t2;
+    	let h11;
+    	let t4;
+    	let h12;
+    	let t6;
     	let div1;
     	let current;
     	let each_value = Array(/*max_image_id*/ ctx[0]);
@@ -4706,9 +4715,15 @@ var app = (function () {
     			div0 = element("div");
     			img = element("img");
     			t0 = space();
-    			h1 = element("h1");
-    			h1.textContent = "Willkommen zur Kunst Gallerie des Birklehof!";
+    			h10 = element("h1");
+    			h10.textContent = "Willkommen zur Kunst Gallerie";
     			t2 = space();
+    			h11 = element("h1");
+    			h11.textContent = "des Birklehof!";
+    			t4 = space();
+    			h12 = element("h1");
+    			h12.textContent = "Willkommen zur Kunst Gallerie des Birklehof!";
+    			t6 = space();
     			div1 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -4718,11 +4733,16 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "assets/landing/landing.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Landing");
     			add_location(img, file$6, 8, 4, 168);
-    			add_location(h1, file$6, 9, 4, 227);
+    			attr_dev(h10, "class", "big-title");
+    			add_location(h10, file$6, 9, 4, 227);
+    			attr_dev(h11, "class", "big-title");
+    			add_location(h11, file$6, 10, 4, 288);
+    			attr_dev(h12, "class", "small-title");
+    			add_location(h12, file$6, 11, 4, 334);
     			attr_dev(div0, "class", "landing");
     			add_location(div0, file$6, 7, 2, 142);
     			attr_dev(div1, "class", "masonry");
-    			add_location(div1, file$6, 11, 2, 292);
+    			add_location(div1, file$6, 13, 2, 419);
     			add_location(div2, file$6, 6, 0, 134);
     		},
     		l: function claim(nodes) {
@@ -4733,8 +4753,12 @@ var app = (function () {
     			append_dev(div2, div0);
     			append_dev(div0, img);
     			append_dev(div0, t0);
-    			append_dev(div0, h1);
-    			append_dev(div2, t2);
+    			append_dev(div0, h10);
+    			append_dev(div0, t2);
+    			append_dev(div0, h11);
+    			append_dev(div0, t4);
+    			append_dev(div0, h12);
+    			append_dev(div2, t6);
     			append_dev(div2, div1);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -4810,7 +4834,7 @@ var app = (function () {
     function instance$6($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Home', slots, []);
-    	let { max_image_id = 2 } = $$props;
+    	let { max_image_id = 3 } = $$props;
     	const writable_props = ['max_image_id'];
 
     	Object.keys($$props).forEach(key => {
@@ -5458,7 +5482,36 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (59:8) <Lazy height={300}>
+    // (39:6) <Link to="/" class="back-link">
+    function create_default_slot_1$1(ctx) {
+    	let p;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			p.textContent = "Zurück zur Übersicht";
+    			add_location(p, file$1, 39, 8, 1433);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1$1.name,
+    		type: "slot",
+    		source: "(39:6) <Link to=\\\"/\\\" class=\\\"back-link\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (65:8) <Lazy height={300}>
     function create_default_slot$1(ctx) {
     	let img;
     	let img_src_value;
@@ -5468,7 +5521,7 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = "assets/pictures/picture_" + (/*i*/ ctx[8] + 1).toString() + ".jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Please wait ... ");
-    			add_location(img, file$1, 59, 10, 1983);
+    			add_location(img, file$1, 65, 10, 2147);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -5482,14 +5535,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(59:8) <Lazy height={300}>",
+    		source: "(65:8) <Lazy height={300}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:4) {#each Array(max_image_id) as _, i}
+    // (63:4) {#each Array(max_image_id) as _, i}
     function create_each_block(ctx) {
     	let div;
     	let lazy;
@@ -5516,8 +5569,8 @@ var app = (function () {
     			div = element("div");
     			create_component(lazy.$$.fragment);
     			t = space();
-    			attr_dev(div, "class", "item");
-    			add_location(div, file$1, 57, 6, 1893);
+    			attr_dev(div, "class", "item clickable");
+    			add_location(div, file$1, 63, 6, 2047);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -5561,7 +5614,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(57:4) {#each Array(max_image_id) as _, i}",
+    		source: "(63:4) {#each Array(max_image_id) as _, i}",
     		ctx
     	});
 
@@ -5569,33 +5622,47 @@ var app = (function () {
     }
 
     function create_fragment$1(ctx) {
-    	let div9;
-    	let div0;
+    	let div10;
+    	let div1;
     	let img0;
     	let img0_src_value;
     	let t0;
     	let h1;
     	let t2;
-    	let div7;
-    	let div2;
-    	let div1;
-    	let ioiosarrowback;
+    	let div0;
+    	let link;
     	let t3;
+    	let div8;
+    	let div3;
+    	let div2;
+    	let ioiosarrowback;
+    	let t4;
     	let img1;
     	let img1_src_value;
-    	let t4;
-    	let div4;
-    	let div3;
-    	let ioiosarrowforward;
     	let t5;
-    	let div6;
     	let div5;
-    	let ioiosclose;
+    	let div4;
+    	let ioiosarrowforward;
     	let t6;
-    	let div8;
+    	let div7;
+    	let div6;
+    	let ioiosclose;
+    	let t7;
+    	let div9;
     	let current;
     	let mounted;
     	let dispose;
+
+    	link = new Link$1({
+    			props: {
+    				to: "/",
+    				class: "back-link",
+    				$$slots: { default: [create_default_slot_1$1] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
     	ioiosarrowback = new IoIosArrowBack({ $$inline: true });
     	ioiosarrowforward = new IoIosArrowForward({ $$inline: true });
     	ioiosclose = new IoIosClose({ $$inline: true });
@@ -5613,29 +5680,32 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div9 = element("div");
-    			div0 = element("div");
+    			div10 = element("div");
+    			div1 = element("div");
     			img0 = element("img");
     			t0 = space();
     			h1 = element("h1");
     			h1.textContent = "Thema 1";
     			t2 = space();
-    			div7 = element("div");
-    			div2 = element("div");
-    			div1 = element("div");
-    			create_component(ioiosarrowback.$$.fragment);
+    			div0 = element("div");
+    			create_component(link.$$.fragment);
     			t3 = space();
-    			img1 = element("img");
-    			t4 = space();
-    			div4 = element("div");
-    			div3 = element("div");
-    			create_component(ioiosarrowforward.$$.fragment);
-    			t5 = space();
-    			div6 = element("div");
-    			div5 = element("div");
-    			create_component(ioiosclose.$$.fragment);
-    			t6 = space();
     			div8 = element("div");
+    			div3 = element("div");
+    			div2 = element("div");
+    			create_component(ioiosarrowback.$$.fragment);
+    			t4 = space();
+    			img1 = element("img");
+    			t5 = space();
+    			div5 = element("div");
+    			div4 = element("div");
+    			create_component(ioiosarrowforward.$$.fragment);
+    			t6 = space();
+    			div7 = element("div");
+    			div6 = element("div");
+    			create_component(ioiosclose.$$.fragment);
+    			t7 = space();
+    			div9 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
@@ -5643,76 +5713,88 @@ var app = (function () {
 
     			if (!src_url_equal(img0.src, img0_src_value = "assets/landing/landing.jpg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Landing");
-    			add_location(img0, file$1, 34, 4, 1256);
-    			add_location(h1, file$1, 35, 4, 1315);
-    			attr_dev(div0, "class", "landing");
-    			add_location(div0, file$1, 33, 2, 1230);
-    			attr_dev(div1, "class", "icon");
-    			add_location(div1, file$1, 39, 6, 1414);
-    			attr_dev(div2, "id", "next_left");
-    			add_location(div2, file$1, 38, 4, 1366);
+    			add_location(img0, file$1, 35, 4, 1301);
+    			add_location(h1, file$1, 36, 4, 1360);
+    			add_location(div0, file$1, 37, 4, 1381);
+    			attr_dev(div1, "class", "landing");
+    			add_location(div1, file$1, 34, 2, 1275);
+    			attr_dev(div2, "class", "icon");
+    			add_location(div2, file$1, 45, 6, 1568);
+    			attr_dev(div3, "id", "next_left");
+    			add_location(div3, file$1, 44, 4, 1520);
     			attr_dev(img1, "id", "focus_image");
     			if (!src_url_equal(img1.src, img1_src_value = "assets/pictures/picture_1.jpg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Please wait ... ");
-    			add_location(img1, file$1, 43, 4, 1488);
-    			attr_dev(div3, "class", "icon");
-    			add_location(div3, file$1, 45, 6, 1626);
-    			attr_dev(div4, "id", "next_right");
-    			add_location(div4, file$1, 44, 4, 1576);
-    			attr_dev(div5, "class", "icon");
-    			add_location(div5, file$1, 50, 6, 1748);
-    			attr_dev(div6, "id", "close");
-    			add_location(div6, file$1, 49, 4, 1703);
-    			attr_dev(div7, "id", "overlay");
-    			add_location(div7, file$1, 37, 2, 1343);
-    			attr_dev(div8, "class", "masonry");
-    			add_location(div8, file$1, 55, 2, 1825);
-    			add_location(div9, file$1, 32, 0, 1222);
+    			add_location(img1, file$1, 49, 4, 1642);
+    			attr_dev(div4, "class", "icon");
+    			add_location(div4, file$1, 51, 6, 1780);
+    			attr_dev(div5, "id", "next_right");
+    			add_location(div5, file$1, 50, 4, 1730);
+    			attr_dev(div6, "class", "icon");
+    			add_location(div6, file$1, 56, 6, 1902);
+    			attr_dev(div7, "id", "close");
+    			add_location(div7, file$1, 55, 4, 1857);
+    			attr_dev(div8, "id", "overlay");
+    			add_location(div8, file$1, 43, 2, 1497);
+    			attr_dev(div9, "class", "masonry");
+    			add_location(div9, file$1, 61, 2, 1979);
+    			add_location(div10, file$1, 33, 0, 1267);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div9, anchor);
-    			append_dev(div9, div0);
-    			append_dev(div0, img0);
-    			append_dev(div0, t0);
-    			append_dev(div0, h1);
-    			append_dev(div9, t2);
-    			append_dev(div9, div7);
-    			append_dev(div7, div2);
-    			append_dev(div2, div1);
-    			mount_component(ioiosarrowback, div1, null);
-    			append_dev(div7, t3);
-    			append_dev(div7, img1);
-    			append_dev(div7, t4);
-    			append_dev(div7, div4);
-    			append_dev(div4, div3);
-    			mount_component(ioiosarrowforward, div3, null);
-    			append_dev(div7, t5);
+    			insert_dev(target, div10, anchor);
+    			append_dev(div10, div1);
+    			append_dev(div1, img0);
+    			append_dev(div1, t0);
+    			append_dev(div1, h1);
+    			append_dev(div1, t2);
+    			append_dev(div1, div0);
+    			mount_component(link, div0, null);
+    			append_dev(div10, t3);
+    			append_dev(div10, div8);
+    			append_dev(div8, div3);
+    			append_dev(div3, div2);
+    			mount_component(ioiosarrowback, div2, null);
+    			append_dev(div8, t4);
+    			append_dev(div8, img1);
+    			append_dev(div8, t5);
+    			append_dev(div8, div5);
+    			append_dev(div5, div4);
+    			mount_component(ioiosarrowforward, div4, null);
+    			append_dev(div8, t6);
+    			append_dev(div8, div7);
     			append_dev(div7, div6);
-    			append_dev(div6, div5);
-    			mount_component(ioiosclose, div5, null);
-    			append_dev(div9, t6);
-    			append_dev(div9, div8);
+    			mount_component(ioiosclose, div6, null);
+    			append_dev(div10, t7);
+    			append_dev(div10, div9);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(div8, null);
+    				each_blocks[i].m(div9, null);
     			}
 
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(div2, "click", /*next_left*/ ctx[2], false, false, false),
-    					listen_dev(div4, "click", /*next_right*/ ctx[3], false, false, false),
-    					listen_dev(div6, "click", hide_image, false, false, false)
+    					listen_dev(div3, "click", /*next_left*/ ctx[2], false, false, false),
+    					listen_dev(div5, "click", /*next_right*/ ctx[3], false, false, false),
+    					listen_dev(div7, "click", hide_image, false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
+    			const link_changes = {};
+
+    			if (dirty & /*$$scope*/ 512) {
+    				link_changes.$$scope = { dirty, ctx };
+    			}
+
+    			link.$set(link_changes);
+
     			if (dirty & /*show_image, max_image_id*/ 3) {
     				each_value = Array(/*max_image_id*/ ctx[0]);
     				validate_each_argument(each_value);
@@ -5728,7 +5810,7 @@ var app = (function () {
     						each_blocks[i] = create_each_block(child_ctx);
     						each_blocks[i].c();
     						transition_in(each_blocks[i], 1);
-    						each_blocks[i].m(div8, null);
+    						each_blocks[i].m(div9, null);
     					}
     				}
 
@@ -5743,6 +5825,7 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
+    			transition_in(link.$$.fragment, local);
     			transition_in(ioiosarrowback.$$.fragment, local);
     			transition_in(ioiosarrowforward.$$.fragment, local);
     			transition_in(ioiosclose.$$.fragment, local);
@@ -5754,6 +5837,7 @@ var app = (function () {
     			current = true;
     		},
     		o: function outro(local) {
+    			transition_out(link.$$.fragment, local);
     			transition_out(ioiosarrowback.$$.fragment, local);
     			transition_out(ioiosarrowforward.$$.fragment, local);
     			transition_out(ioiosclose.$$.fragment, local);
@@ -5766,7 +5850,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div9);
+    			if (detaching) detach_dev(div10);
+    			destroy_component(link);
     			destroy_component(ioiosarrowback);
     			destroy_component(ioiosarrowforward);
     			destroy_component(ioiosclose);
@@ -5838,6 +5923,7 @@ var app = (function () {
     	};
 
     	$$self.$capture_state = () => ({
+    		Link: Link$1,
     		IoIosArrowBack,
     		IoIosArrowForward,
     		IoIosClose,

@@ -3,9 +3,9 @@
 }
 
 body {
-	font-family: sans-serif;
 	margin: 0;
 	background: rgba(220,221,223,255);
+	font-family: 'Merriweather', serif;
 }
 
 .toolbar {
@@ -36,32 +36,93 @@ body {
 	left: 0;
 	height: 66vh;
 	width: 100vw;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .landing h1 {
+	width: max-content;
 	position: absolute;
+	left: 60%;
 	top: 50%;
+	text-align: center;
+	color: white;
+	font-size: 3.5rem;
+	margin: 0;
+	cursor: default;
+	transform: translate(-50%, 25%);
+}
+
+.landing h1:first-of-type {
+	left: 50%;
+	transform: translate(-50%, -75%);
+}
+
+.landing h1::before {
+	background: red;
+	content: "";
+	inset: 0;
+	position: absolute;
+	transform: scaleX(0);
+	z-index: -1;
+	transform-origin: left;
+	animation: highlight 6s ease-in-out 1s, transition-dir 10s linear 4s;
+}
+
+@keyframes highlight {
+	0% {
+		transform: scaleX(0);
+	}
+	25% {
+		transform: scaleX(1);
+	}
+	50% {
+		transform: scaleX(1);
+	}
+	100% {
+		transform: scaleX(0);
+	}
+}
+
+@keyframes transition-dir {
+	from {
+		transform-origin: right;
+	}
+	to {
+		transform-origin: right;
+		background: blue;
+	}
+}
+
+.landing .back-link {
+	position: absolute;
+	top: 80%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
 	color: black;
-	font-size: 3.5rem;
+	font-size: 1.2rem;
 	margin: 0;
-	font-family: 'Merriweather', serif;
 }
 
 .landing h1:focus-visible {
 	outline: none;
 }
 
+.small-title {
+	display: none;
+}
+
 @media screen and (max-width: 900px) {
-	.landing h1 {
-		position: absolute;
-		top: 33%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		font-size: 2rem;
+	.big-title {
+		display: none;
+	}
+	.small-title {
+		display: block;
+		font-size: 2rem !important;
+		transform: translate(-50%, -50%) !important;
+		top: calc(50% + 10%) !important;
+		left: 50% !important;
+		width: auto !important;
 	}
 }
 
@@ -80,7 +141,6 @@ body {
 }
 
 .item {
-	cursor: pointer;
 	display: inline-block;
 	background: #fff;
 	padding: 1.1em;
@@ -92,8 +152,22 @@ body {
 	-webkit-box-sizing: border-box;
 	box-shadow: 2px 2px 4px 0 #ccc;
 }
+
+.item .clickable {
+	cursor: pointer;
+}
+
 .item img {
 	max-width:100%;
+}
+
+.item title {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 300px;
+	width: 100px;
 }
 
 @media only screen and (max-width: 320px) {
@@ -160,7 +234,7 @@ body {
 	z-index: 101;
 	overflow: hidden;
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px, rgba(0, 0, 0, 0.4) 0px 13px 11px;
-	transition: all 0.12s;
+	transition: all 0.12s ease-in-out;
 }
 
 #next_left:hover, #next_right:hover {
