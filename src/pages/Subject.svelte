@@ -1,5 +1,4 @@
 <script>
-    import { Link } from "svelte-navigator";
     import IoIosArrowBack from 'svelte-icons/io/IoIosArrowBack.svelte';
     import IoIosArrowForward from 'svelte-icons/io/IoIosArrowForward.svelte';
     import IoIosClose from 'svelte-icons/io/IoIosClose.svelte';
@@ -36,24 +35,24 @@
     <img src={"assets/landing/landing.jpg"} alt="Landing">
     <h1>Thema 1</h1>
     <div>
-      <Link to="/" class="back-link">
+      <a href="#home" class="back-link">
         <p>Zurück zur Übersicht</p>
-      </Link>
+      </a>
     </div>
   </div>
   <div id="overlay">
-    <div id="next_left" on:click={next_left}>
+    <div id="next_left" class="clickable" on:click={next_left}>
       <div class="icon">
         <IoIosArrowBack />
       </div>
     </div>
     <img id="focus_image" src={"assets/pictures/picture_1.jpg"} alt="Please wait ... ">
-    <div id="next_right" on:click={next_right}>
+    <div id="next_right" class="clickable" on:click={next_right}>
       <div class="icon">
         <IoIosArrowForward />
       </div>
     </div>
-    <div id="close" on:click={hide_image}>
+    <div id="close" class="clickable" on:click={hide_image}>
       <div class="icon">
         <IoIosClose />
       </div>

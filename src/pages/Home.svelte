@@ -1,5 +1,4 @@
 <script>
-    import { Link } from "svelte-navigator";
     import Lazy from 'svelte-lazy';
     export var max_image_id = 3;
 </script>
@@ -17,7 +16,7 @@
         <Lazy height={300}>
           <img src={"assets/pictures/picture_" + (i+1).toString() + ".jpg"} alt="Please wait ... "/>
         </Lazy>
-        <Link to="/subject"><h2>Thema 1</h2></Link>
+        <a href="#subject"><h2>Thema 1</h2></a>
         <p>Eine kurze Beschreibung des Themas und der Klassen, die daran gearbeitet haben.</p>
       </div>
     {/each}
