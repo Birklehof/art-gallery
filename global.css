@@ -68,7 +68,7 @@ body {
 
 .landing h1:first-of-type {
 	left: 50%;
-	transform: translate(-50%, -75%);
+	transform: translate(-50%, -74%);
 }
 
 .landing h1::before {
@@ -176,6 +176,7 @@ body {
 	-webkit-column-gap: 2rem;
 	column-gap: 2rem;
 	font-size: .85em;
+	flex-flow: row;
 }
 
 .item {
