@@ -38,7 +38,8 @@
   <div class="landing">
     <img src={image_path + (Math.floor(Math.random() * max_image_id)).toString() + ".jpg"} alt="Landing">
     <div class="overlay"></div>
-    <h1>Waldboden</h1>
+    <h1 class="big-title">Waldboden</h1>
+    <h1 class="small-title">Waldboden</h1>
     <p class="description">Wir gingen gemeinsam in den Wald um Skizzen von den Dingen, die auf dem Waldboden zu sehen sind, zu erfassen. Ausgehend von diesen Zeichnungen haben die SchülerInnen begonnen Schicht für Schicht die Waldböden zu malen.</p>
     <div>
       <a href="#Home" class="back-link">

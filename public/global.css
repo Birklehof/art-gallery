@@ -89,7 +89,7 @@ body {
 	transform: translateX(-50%);
 	top: 52%;
 	width: 50%;
-	min-width: 350px;
+	min-width: 320px;
 	font-size: 1.2rem;
 }
 
@@ -162,6 +162,12 @@ body {
 		left: 50% !important;
 		width: auto !important;
 	}
+	.description {
+		display: none;
+	}
+	.landing .back-link {
+		top: 80%;
+	}
 }
 
 .masonry {
@@ -213,20 +219,6 @@ a {
 	background-size: cover;
 	height: 300px;
 	width: 100px;
-}
-
-@media only screen and (max-width: 320px) {
-	.masonry {
-		-moz-column-count: 1;
-		-webkit-column-count: 1;
-		column-count: 1;
-		margin: 0.5rem;
-	}
-
-	.item {
-		padding: 5px;
-		margin-bottom: 0.5rem;
-	}
 }
 
 @media only screen and (min-width: 321px) and (max-width: 768px) {
@@ -323,4 +315,28 @@ a {
 	transform: translate(-50%, -50%);
 	width: 2rem;
 	height: 2rem;
+}
+
+@media only screen and (max-width: 400px) {
+	.masonry {
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+		margin: 0.5rem;
+	}
+
+	.item {
+		padding: 5px;
+		margin-bottom: 0.5rem;
+	}
+
+	#next_left, #next_right, #close {
+		width: 2rem !important;
+		height: 2rem !important;
+	}
+	.icon {
+		width: 1.3rem;
+		height: 1.3rem;
+	}
+
 }

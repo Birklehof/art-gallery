@@ -38,7 +38,8 @@
   <div class="landing">
     <img src={image_path + (Math.floor(Math.random() * max_image_id)).toString() + ".jpg"} alt="Landing">
     <div class="overlay"></div>
-    <h1>Landschaften</h1>
+    <h1 class="big-title">Landschaften</h1>
+    <h1 class="small-title">Landschaften</h1>
     <p class="description">Raumtiefe entsteht durch Landschaftsebenen, Proportionen und die Luftperspektive (Verblassen und Verblauen von in der Ferne liegenden Bildelementen). In dieser praktischen Arbeit wurden typische Schwarzwald Landschaften umgesetzt.</p>
     <div>
       <a href="#Home" class="back-link">
