@@ -20,9 +20,9 @@
   <div class="landing">
     <img src={"assets/landing/landing.jpg"} alt="Landing">
     <div class="overlay"></div>
-    <h1 class="big-title">Willkommen zur Kunst Gallerie</h1>
+    <h1 class="big-title">Willkommen zur Kunstgallerie</h1>
     <h1 class="big-title">des Birklehof!</h1>
-    <h1 class="small-title">Willkommen zur Kunst Gallerie des Birklehof!</h1>
+    <h1 class="small-title">Willkommen zur Kunstgallerie des Birklehof!</h1>
   </div>
   <div class="masonry">
     {#each subjects as subject}
