@@ -1,23 +1,38 @@
 <script>
     import Lazy from 'svelte-lazy';
-    export var max_image_id = 3;
+    const subjects = [
+        {
+            title: 'Waldboden',
+            class: '7. Klasse Dez 2021',
+            description: 'Wir gingen gemeinsam in den Wald um Skizzen von den Dingen, die auf dem Waldboden zu sehen sind, zu erfassen. \n' +
+                '\n' +
+                'Ausgehend von diesen Zeichnungen haben die SchülerInnen begonnen Schicht für Schicht die Waldböden zu malen.'
+
+        },
+        {
+            title: 'Landschaften',
+            class: 'Q2 Feb 2022',
+            description: 'Raumtiefe entsteht durch Landschaftsebenen, Proportionen und die Luftperspektive (Verblassen und Verblauen von in der Ferne liegenden Bildelementen). In dieser praktischen Arbeit wurden typische Schwarzwald Landschaften umgesetzt. '
+        }]
 </script>
 
 <div>
   <div class="landing">
     <img src={"assets/landing/landing.jpg"} alt="Landing">
+    <div class="overlay"></div>
     <h1 class="big-title">Willkommen zur Kunst Gallerie</h1>
     <h1 class="big-title">des Birklehof!</h1>
     <h1 class="small-title">Willkommen zur Kunst Gallerie des Birklehof!</h1>
   </div>
   <div class="masonry">
-    {#each Array(max_image_id) as _, i}
+    {#each subjects as subject}
       <div class="item">
         <Lazy height={300}>
-          <img src={"assets/pictures/picture_" + (i+1).toString() + ".jpg"} alt="Please wait ... "/>
+          <img src={"assets/pictures/" + subject.title + "/IMG_1.jpg"} alt="Please wait ... "/>
         </Lazy>
-        <a href="#subject"><h2>Thema 1</h2></a>
-        <p>Eine kurze Beschreibung des Themas und der Klassen, die daran gearbeitet haben.</p>
+        <a href={"#" + subject.title}><h2>{subject.title}</h2></a>
+        <p>{subject.class}</p>
+        <p>{subject.description}</p>
       </div>
     {/each}
   </div>

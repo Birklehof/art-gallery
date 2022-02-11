@@ -1,11 +1,12 @@
 <script>
 	import Home from "./pages/Home.svelte";
-	import Subject from "./pages/Subject.svelte";
 	import NotFound from "./pages/NotFound.svelte";
+	import Waldboden from "./pages/Waldboden.svelte";
+	import Landschaften from "./pages/Landschaften.svelte";
 
 	let page = document.location.hash;
 
-	window.onpopstate = function(event) {
+	window.onpopstate = function(_event) {
 		page = document.location.hash;
 	};
 
@@ -15,12 +16,14 @@
 </script>
 <main>
 	<div class="toolbar">
-		<img alt="Birklehof | Privates Internat & Gymnasium" style="cursor: pointer" on:click={() => openInNewTab("https://www.birklehof.de/")} id="logo" src="https://www.birklehof.de/wp-content/themes/birklehof-v2/img/birklehof-logo.png">
+		<img alt="Birklehof | Privates Internat & Gymnasium" style="cursor: pointer" on:click={() => openInNewTab("https://www.birklehof.de/")} id="logo" src="./assets/logo.png">
 	</div>
-	{#if page==="#home" || page===""}
+	{#if page==="#Home" || page===""}
 		<Home />
-	{:else if page === "#subject"}
-		<Subject />
+	{:else if page === "#Waldboden"}
+		<Waldboden />
+	{:else if page === "#Landschaften"}
+		<Landschaften />
 	{:else}
 		<NotFound />
 	{/if}
