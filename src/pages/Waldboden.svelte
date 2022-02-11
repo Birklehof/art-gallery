@@ -36,7 +36,7 @@
 
 <div>
   <div class="landing">
-    <img src={image_path + (Math.floor(Math.random() * max_image_id)).toString() + ".jpg"} alt="Landing">
+    <img src={image_path + ((Math.floor(Math.random() * (max_image_id-1)))+1).toString() + ".jpg"} alt="Landing">
     <div class="overlay"></div>
     <h1 class="big-title">Waldboden</h1>
     <h1 class="small-title">Waldboden</h1>
