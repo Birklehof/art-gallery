@@ -2,7 +2,9 @@
 	import Home from "./pages/Home.svelte";
 	import NotFound from "./pages/NotFound.svelte";
 	import Waldboden from "./pages/Waldboden.svelte";
-	import Landschaften from "./pages/Landschaften.svelte";
+	import Landschaften from "./pages/Schwarzwaldlandschaften.svelte";
+	import Individuelle_Stillleben from "./pages/Individuelle_Stillleben.svelte";
+	import Konsumwaren from "./pages/Konsumwaren.svelte";
 
 	let page = document.location.hash;
 
@@ -22,8 +24,12 @@
 		<Home />
 	{:else if page === "#Waldboden"}
 		<Waldboden />
-	{:else if page === "#Landschaften"}
+	{:else if page === "#Schwarzwaldlandschaften"}
 		<Landschaften />
+	{:else if page === "#Individuelle_Stillleben"}
+		<Individuelle_Stillleben />
+	{:else if page === "#Konsumwaren"}
+		<Konsumwaren />
 	{:else}
 		<NotFound />
 	{/if}
