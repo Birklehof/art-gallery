@@ -13,7 +13,7 @@
 }
 
 html {
-	scroll-behavior: smooth;
+	scroll-behavior: auto;
 }
 
 body {
@@ -71,7 +71,7 @@ body {
 	transform: translate(-50%, -74%);
 }
 
-.landing h1::before {
+.main-title::before {
 	background: #004F49;
 	content: "";
 	inset: 0;
@@ -330,13 +330,37 @@ a {
 		margin-bottom: 0.5rem;
 	}
 
-	#next_left, #next_right, #close {
+	#close {
 		width: 2rem !important;
 		height: 2rem !important;
 	}
-	.icon {
+	#next_left {
+		top: 90%;
+		left: 15%;
+		width: 3.5rem !important;
+		height: 3.5rem !important;
+	}
+
+	#next_right {
+		width: 3.5rem !important;
+		height: 3.5rem !important;
+		top: 90%;
+		left: 85%;
+	}
+
+	#close .icon {
 		width: 1.3rem;
 		height: 1.3rem;
+	}
+
+	#next_left .icon, #next_right .icon {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	#next_left:hover, #next_right:hover {
+		top: 90%;
+		box-shadow: rgb(0, 0, 0, 0.5) 0px 20px 38px, rgb(0, 0, 0, 0.4) 0px 20px 14px;
 	}
 
 }
