@@ -329,11 +329,12 @@ a {
 
 .masonry .brick {
 	position: relative;
-	background-color: black;
+	background-color: white;
 	margin: 10px 10px 2rem;
 	display: inline-block;
 	vertical-align: top;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	/* 2px 2px 4px 0 #ccc */
 	border-radius: 4px;
 }
 
@@ -350,16 +351,42 @@ a {
 	opacity: .5;
 }
 
-.masonry .hover-effect:before {
+.masonry .hover-effect h1 {
+	font-size: 1.7rem;
+	margin: 10px;
 	position: absolute;
-	content: "Hallo";
-	margin: 10%;
+	background-color: transparent;
 	color: transparent;
-	z-index: 2;
-	transition: all .5s ;
+	transition: all .3s;
+	word-break: keep-all;
+	white-space: nowrap;
+	width: calc(100% - 20px);
+	overflow: hidden;
 }
 
-.masonry .hover-effect:hover:before {
+.masonry .hover-effect a {
+	color: transparent;
+	transition: all .3s;
+	word-break: keep-all;
+	white-space: nowrap;
+	width: calc(100% - 20px);
+	overflow: hidden;
+}
+
+.masonry .hover-effect p {
+	margin: 3rem 10px 10px;
+	position: absolute;
+	background-color: transparent;
+	color: transparent;
+	transition: all .3s;
+	word-break: break-word;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px - 3rem);
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.masonry .hover-effect:hover a, .masonry .hover-effect:hover h1, .masonry .hover-effect:hover p {
 	color: white;
 }
 
@@ -369,7 +396,7 @@ a {
 	}
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
 	.masonry {
 		column-count: 3;
 	}

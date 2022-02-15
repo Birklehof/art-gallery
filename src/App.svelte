@@ -30,8 +30,8 @@
 			description: 'Raumtiefe entsteht durch Landschaftsebenen, Proportionen und die Luftperspektive (Verblassen und Verblauen von in der Ferne liegenden Bildelementen). In dieser praktischen Arbeit wurden typische Schwarzwald Schwarzwaldlandschaften umgesetzt. '
 		},
 		{
-			title: 'Individuelle Stillleben',
-			dir: 'Individuelle_Stillleben',
+			title: 'Individuelles Stillleben',
+			dir: 'Individuelles_Stillleben',
 			max_image_id: 5,
 			class: 'Q1 Feb 2022',
 			materials: 'Acryl auf Leinwand, 40 x 50 cm',
@@ -56,7 +56,7 @@
 		{
 			title: 'Möbeldesign',
 			dir: 'Moebeldesign',
-			max_image_id: 18,
+			max_image_id: 30,
 			class: 'Klasse 6, Feb 2022',
 			materials: 'Modelle aus Holzpappe, Strohhalmen ect, ca. 10 x 15 cm',
 			description: 'Auf spielerische Art und Weise hat sich die Klasse dem Thema Möbeldesign genähert und ein Modell entworfen, welches zwei unterschiedliche Funktionen hat.'
