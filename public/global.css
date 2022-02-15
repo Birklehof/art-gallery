@@ -244,13 +244,13 @@ a {
 	text-align: center;
 	z-index: 101;
 	overflow: hidden;
-	box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px, rgba(0, 0, 0, 0.4) 0px 13px 11px;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px, rgba(0, 0, 0, 0.4) 0 13px 11px;
 	transition: all 0.12s ease-in-out;
 }
 
 #next_left:hover, #next_right:hover {
 	top: calc(50% - 5px);
-	box-shadow: rgb(0, 0, 0, 0.5) 0px 20px 38px, rgb(0, 0, 0, 0.4) 0px 20px 14px;
+	box-shadow: rgb(0, 0, 0, 0.5) 0 20px 38px, rgb(0, 0, 0, 0.4) 0 20px 14px;
 }
 
 #close:hover {
@@ -316,7 +316,7 @@ a {
 
 	#next_left:hover, #next_right:hover {
 		top: 90%;
-		box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px, rgba(0, 0, 0, 0.4) 0px 13px 11px;
+		box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px, rgba(0, 0, 0, 0.4) 0 13px 11px;
 	}
 }
 
@@ -333,7 +333,7 @@ a {
 	margin: 10px 10px 2rem;
 	display: inline-block;
 	vertical-align: top;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 	/* 2px 2px 4px 0 #ccc */
 	border-radius: 4px;
 }
@@ -390,20 +390,18 @@ a {
 	color: white;
 }
 
-@media only screen and (min-width: 650px) {
+.masonry {
+	column-count: 1;
+}
+
+@media only screen and (min-width: 800px) {
 	.masonry {
 		column-count: 2;
 	}
 }
 
-@media only screen and (min-width: 1200px) {
-	.masonry {
-		column-count: 3;
-	}
-}
-
 @media only screen and (min-width: 1500px) {
 	.masonry {
-		column-count: 4;
+		column-count: 3;
 	}
 }
