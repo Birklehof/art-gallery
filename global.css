@@ -18,7 +18,7 @@ html {
 
 body {
 	margin: 0;
-	background: rgb(245, 245, 245);
+	background: rgb(255, 255, 255);
 	font-family: 'Merriweather', serif;
 }
 
@@ -37,10 +37,19 @@ body {
 	height: 100%;
 }
 
-.landing {
+.overlay {
+	content: "";
 	position: absolute;
+	top: 0;
+	left: 0;
+	height: 70vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.landing {
 	top: 8%;
-	height: 66vh;
+	height: 70vh;
 	width: 100vw;
 }
 
@@ -48,7 +57,7 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 66vh;
+	height: 70vh;
 	width: 100vw;
 	object-fit: cover;
 }
@@ -56,8 +65,8 @@ body {
 .landing h1 {
 	width: max-content;
 	position: absolute;
-	left: 60%;
-	top: 50%;
+	left: 50%;
+	top: 30vh;
 	text-align: center;
 	color: white;
 	font-size: 3.5rem;
@@ -80,27 +89,6 @@ body {
 	z-index: -1;
 	transform-origin: left;
 	animation: highlight 4s ease-in-out 0.5s, transition-dir 10s linear 3s;
-}
-
-.landing .description {
-	color: white;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	top: 52%;
-	width: 50%;
-	min-width: 320px;
-	font-size: 1.2rem;
-}
-
-.overlay {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 66vh;
-	width: 100vw;
-	background-color: rgba(0, 0, 0, 0.3);
 }
 
 @keyframes highlight {
@@ -127,15 +115,61 @@ body {
 	}
 }
 
-.landing .back-link {
+.landing .info {
+	color: white;
 	position: absolute;
-	top: 90%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%);
+	top: 34vh;
+	max-height: 24vh;
+	width: 50%;
+	min-width: 320px;
+	font-size: 1.2rem;
+	overflow: scroll;
+}
+
+.landing .description {
+	text-overflow: ellipsis;
+	min-width: 320px;
+	font-size: 1.2rem;
+}
+
+.landing .class {
+	text-overflow: ellipsis;
+	min-width: 320px;
+	font-size: 1.2rem;
+}
+
+.landing .materials {
+	text-overflow: ellipsis;
+	min-width: 320px;
+	font-size: 1.2rem;
+}
+
+.landing .back-link {
+	text-decoration: none;
+	border-bottom: 1px solid white;
+	position: absolute;
+	top: 70vh;
+	left: 50%;
+	transform: translate(-50%, -200%);
 	text-align: center;
 	color: white;
 	font-size: 1.2rem;
 	margin: 0;
+}
+
+@media screen and (max-height: 800px) {
+	.landing .info {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.landing .back-link {
+		border-bottom: none;
+		text-decoration: underline;
+	}
 }
 
 .landing .back-link p {
@@ -151,51 +185,20 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-	.big-title {
+	.landing .big-title {
 		display: none;
 	}
-	.small-title {
+	.landing .small-title {
 		display: block;
-		font-size: 2rem !important;
-		transform: translate(-50%, -50%) !important;
-		top: calc(50% + 10%) !important;
-		left: 50% !important;
-		width: auto !important;
+		font-size: 2rem;
+		left: 50%;
+		top: 30vh;
+		transform: translate(-50%, -50%);
+		width: auto;
 	}
-	.description {
+	.info .materials {
 		display: none;
 	}
-	.landing .back-link {
-		top: 80%;
-	}
-}
-
-.masonry {
-	position: absolute;
-	top: calc(66vh + 8%);
-	-webkit-column-count: 3;
-	-moz-column-count: 3;
-	column-count: 3;
-	margin: 2em;
-	padding: 0;
-	-moz-column-gap: 2rem;
-	-webkit-column-gap: 2rem;
-	column-gap: 2rem;
-	font-size: .85em;
-	flex-flow: row;
-}
-
-.item {
-	display: inline-block;
-	background: #fff;
-	padding: 1.1em;
-	margin: 0 0 2em;
-	width: 100%;
-	-webkit-transition:1s ease all;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-shadow: 2px 2px 4px 0 #ccc;
 }
 
 a {
@@ -206,41 +209,6 @@ a {
 
 .clickable {
 	cursor: pointer;
-}
-
-.item img {
-	max-width:100%;
-}
-
-.item title {
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	height: 300px;
-	width: 100px;
-}
-
-@media only screen and (min-width: 321px) and (max-width: 768px) {
-	.masonry {
-		-moz-column-count: 1;
-		-webkit-column-count: 1;
-		column-count: 1;
-	}
-}
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
-	.masonry {
-		-moz-column-count: 2;
-		-webkit-column-count: 2;
-		column-count: 2;
-	}
-}
-@media only screen and (min-width: 1201px) {
-	.masonry {
-		-moz-column-count: 3;
-		-webkit-column-count: 3;
-		column-count: 3;
-	}
 }
 
 #overlay {
@@ -318,18 +286,6 @@ a {
 }
 
 @media only screen and (max-width: 400px) {
-	.masonry {
-		-moz-column-count: 1;
-		-webkit-column-count: 1;
-		column-count: 1;
-		margin: 0.5rem;
-	}
-
-	.item {
-		padding: 5px;
-		margin-bottom: 0.5rem;
-	}
-
 	#close {
 		width: 2rem !important;
 		height: 2rem !important;
@@ -360,7 +316,67 @@ a {
 
 	#next_left:hover, #next_right:hover {
 		top: 90%;
-		box-shadow: rgb(0, 0, 0, 0.5) 0px 20px 38px, rgb(0, 0, 0, 0.4) 0px 20px 14px;
+		box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px, rgba(0, 0, 0, 0.4) 0px 13px 11px;
 	}
+}
 
+.masonry {
+	transition: all .5s ease-in-out;
+	column-gap: calc(2rem - 10px);
+	column-fill: initial;
+	margin: 2rem;
+}
+
+.masonry .brick {
+	position: relative;
+	background-color: black;
+	margin: 10px 10px 2rem;
+	display: inline-block;
+	vertical-align: top;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 4px;
+}
+
+.masonry .brick img {
+	float: right;
+	max-width: 100%;
+	transition: all .5s ease;
+	backface-visibility: hidden;
+	font-size: 4rem;
+	border-radius: 3px;
+}
+
+.masonry .hover-effect:hover img {
+	opacity: .5;
+}
+
+.masonry .hover-effect:before {
+	position: absolute;
+	content: "Hallo";
+	margin: 10%;
+	color: transparent;
+	z-index: 2;
+	transition: all .5s ;
+}
+
+.masonry .hover-effect:hover:before {
+	color: white;
+}
+
+@media only screen and (min-width: 650px) {
+	.masonry {
+		column-count: 2;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.masonry {
+		column-count: 3;
+	}
+}
+
+@media only screen and (min-width: 1500px) {
+	.masonry {
+		column-count: 4;
+	}
 }
