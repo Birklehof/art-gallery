@@ -121,7 +121,7 @@ body {
 	left: 50%;
 	transform: translateX(-50%);
 	top: 34vh;
-	max-height: 24vh;
+	max-height: 30vh;
 	width: 50%;
 	min-width: 320px;
 	font-size: 1.2rem;
@@ -147,8 +147,11 @@ body {
 }
 
 .landing .back-link {
+	padding-top: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
 	text-decoration: none;
-	border-bottom: 1px solid white;
+	border-bottom: 2px solid white;
 	position: absolute;
 	top: 70vh;
 	left: 50%;
@@ -157,6 +160,12 @@ body {
 	color: white;
 	font-size: 1.2rem;
 	margin: 0;
+	transition: all .5s;
+}
+
+.landing .back-link:hover {
+	background-color: white;
+	color: #004F49;
 }
 
 @media screen and (max-height: 800px) {
@@ -321,20 +330,21 @@ a {
 }
 
 .masonry {
+	width: 70%;
 	transition: all .5s ease-in-out;
 	column-gap: calc(2rem - 10px);
 	column-fill: initial;
-	margin: 2rem;
+	margin: 2rem auto;
 }
 
 .masonry .brick {
 	position: relative;
 	background-color: white;
-	margin: 10px 10px 2rem;
+	margin: 10px 10px 1rem;
 	display: inline-block;
 	vertical-align: top;
 	box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-	/* 2px 2px 4px 0 #ccc */
+	/*box-shadow: 2px 2px 4px 0 #ccc;*/
 	border-radius: 4px;
 }
 
@@ -344,7 +354,7 @@ a {
 	transition: all .5s ease;
 	backface-visibility: hidden;
 	font-size: 4rem;
-	border-radius: 3px;
+	border-radius: 2px;
 }
 
 .masonry .hover-effect:hover img {
@@ -353,35 +363,52 @@ a {
 
 .masonry .hover-effect h1 {
 	font-size: 1.7rem;
-	margin: 10px;
+	margin: 0;
+	padding: 20px 20px 2px;
 	position: absolute;
 	background-color: transparent;
 	color: transparent;
 	transition: all .3s;
 	word-break: keep-all;
 	white-space: nowrap;
-	width: calc(100% - 20px);
+	width: calc(100% - 40px);
 	overflow: hidden;
+	border-bottom: 2px solid transparent;
+}
+
+.masonry .hover-effect h1:hover {
+	color: #004F49 !important;
+	background-color: white;
+}
+
+.masonry .hover-effect h1:hover a {
+	color: #004F49 !important;
 }
 
 .masonry .hover-effect a {
+	display: block;
+	padding: 3px;
 	color: transparent;
 	transition: all .3s;
 	word-break: keep-all;
 	white-space: nowrap;
-	width: calc(100% - 20px);
 	overflow: hidden;
+	text-decoration: none;
+}
+
+.masonry .hover-effect a:hover {
+	color: #004F49 !important;
 }
 
 .masonry .hover-effect p {
-	margin: 3rem 10px 10px;
+	margin: 4.5rem 20px 20px;
 	position: absolute;
 	background-color: transparent;
 	color: transparent;
 	transition: all .3s;
 	word-break: break-word;
-	width: calc(100% - 20px);
-	height: calc(100% - 20px - 3rem);
+	width: calc(100% - 40px);
+	height: calc(100% - 40px - 4.5rem);
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -390,18 +417,32 @@ a {
 	color: white;
 }
 
+.masonry .hover-effect:hover h1 {
+	border-bottom: 2px solid white;
+}
+
 .masonry {
+	margin-left: 1rem;
+	width: calc(100% - 2rem);
+	margin-right: 1rem;
+	margin-top: 1rem;
 	column-count: 1;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 750px) {
 	.masonry {
+		margin: 2rem auto;
+		width: 90%;
 		column-count: 2;
+	}
+	.masonry .brick {
+		margin-bottom: 2rem;
 	}
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1700px) {
 	.masonry {
+		width: 70%;
 		column-count: 3;
 	}
 }
