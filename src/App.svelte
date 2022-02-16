@@ -13,6 +13,9 @@
 		window.open(url, '_blank').focus();
 	}
 
+	// TODO bessere Version des Stilllebens
+	// TODO Schuhe von links nach rechts
+
 	const subjects = [
 		{
 			title: 'Waldboden',
@@ -53,38 +56,47 @@
 			categories: [
 				{
 					title: 'Coca Cola',
+					ending: '.jpg',
 					image_range: [2, 4]
 				},
 				{
 					title: 'KitKat',
+					ending: '.jpg',
 					image_range: [5, 7]
 				},
 				{
 					title: 'Mars',
+					ending: '.jpg',
 					image_range: [8, 8]
 				},
 				{
 					title: 'Mehrbro',
+					ending: '.jpg',
 					image_range: [9, 10]
 				},
 				{
 					title: 'Nesquik',
+					ending: '.jpg',
 					image_range: [11, 13]
 				},
 				{
 					title: 'IPhone',
+					ending: '.jpg',
 					image_range: [14, 16]
 				},
 				{
 					title: 'Sagrotan',
+					ending: '.jpg',
 					image_range: [17, 19]
 				},
 				{
 					title: 'Starbucks',
+					ending: '.jpg',
 					image_range: [20, 22]
 				},
 				{
 					title: 'Lucky Stroke',
+					ending: '.jpg',
 					image_range: [23, 25]
 				}
 			],
