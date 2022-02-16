@@ -21,9 +21,10 @@
     const image_path = 'assets/pictures/' + subject.dir + '/IMG_'
     let curr_image_id = 0
 
-    function show_image(image_id) {
+    function show_image(image_id, ending='.jpg') {
+        document.getElementById('focus_image').src = ''
         curr_image_id = image_id+1;
-        document.getElementById('focus_image').src = image_path + (curr_image_id).toString() + '.jpg'
+        document.getElementById('focus_image').src = image_path + (curr_image_id).toString() + ending
         document.getElementById('overlay').style.display = 'block';
     }
     function hide_image() {
@@ -34,14 +35,26 @@
         if (curr_image_id < 1) {
             curr_image_id = subject.max_image_id
         }
-        document.getElementById('focus_image').src = image_path + (curr_image_id).toString() + '.jpg'
+        let ending = '.jpg'
+        subject.categories.forEach(category => {
+            if (category.image_range[0] <= curr_image_id && category.image_range[1] >= curr_image_id) {
+                ending = category.ending;
+            }
+        })
+        document.getElementById('focus_image').src = image_path + (curr_image_id).toString() + ending
     }
     function next_right() {
         curr_image_id += 1;
         if (curr_image_id > subject.max_image_id) {
             curr_image_id = 1
         }
-        document.getElementById('focus_image').src = image_path + (curr_image_id).toString() + '.jpg'
+        let ending = '.jpg'
+        subject.categories.forEach(category => {
+            if (category.image_range[0] <= curr_image_id && category.image_range[1] >= curr_image_id) {
+                ending = category.ending;
+            }
+        })
+        document.getElementById('focus_image').src = image_path + (curr_image_id).toString() + ending
     }
 </script>
 
@@ -74,7 +87,7 @@
         <IoIosArrowBack />
       </div>
     </div>
-    <img id='focus_image' src='' alt='Please wait ... '>
+    <img id='focus_image' src='' alt=''>
     <div id='next_right' class='clickable' on:click={next_right}>
       <div class='icon'>
         <IoIosArrowForward />
@@ -91,18 +104,12 @@
       <h2 class="subcategory-header">{category.title}</h2>
       <div class='masonry' style={subject.style}>
         {#each Array(category.image_range[1]-category.image_range[0]+1) as _, j}
-          <div class='brick clickable' on:click={() => {show_image(j)}}>
+          <div class='brick clickable' on:click={() => {show_image(j+category.image_range[0]-1, category.ending)}}>
             <Lazy height={300}>
-              <img src={image_path + (j+category.image_range[0]).toString() + '.jpg'} alt='Please wait ... '/>
+              <img src={image_path + (j+category.image_range[0]).toString() + category.ending} alt='Please wait ... '/>
             </Lazy>
           </div>
         {/each}
       </div>
     {/each}
-
-<!--    <div class='brick clickable' on:click={() => {show_image(i)}}>
-      <Lazy height={300}>
-        <img src={image_path + (i+1).toString() + '.jpg'} alt='Please wait ... '/>
-      </Lazy>
-    </div>-->
 </div>

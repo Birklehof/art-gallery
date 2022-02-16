@@ -18,7 +18,7 @@
 			title: 'Waldboden',
 			dir: 'Waldboden',
 			max_image_id: 9,
-			class: '7. Klasse Dezember 2021',
+			class: 'Klasse 7, Dezember 2021',
 			materials: 'Acryl auf Papier, ca. 40 x 40 cm',
 			description: 'Wir gingen gemeinsam in den Wald um Skizzen von den Dingen, die auf dem Waldboden zu sehen sind, zu erfassen. Ausgehend von diesen Zeichnungen haben die SchülerInnen begonnen Schicht für Schicht die Waldböden zu malen.'
 		},
@@ -26,7 +26,7 @@
 			title: 'Schwarzwald',
 			dir: 'Schwarzwald',
 			max_image_id: 10,
-			class: 'Q2 Feb 2022',
+			class: 'Q2, Feb 2022',
 			materials: 'Aquarell auf Papier, ca. 20 x 30 cm',
 			description: 'Raumtiefe entsteht durch Landschaftsebenen, Proportionen und die Luftperspektive (Verblassen und Verblauen von in der Ferne liegenden Bildelementen). In dieser praktischen Arbeit wurden typische Schwarzwald Schwarzwald umgesetzt. '
 		},
@@ -34,15 +34,15 @@
 			title: 'Stillleben',
 			dir: 'Stillleben',
 			max_image_id: 5,
-			class: 'Q1 Feb 2022',
+			class: 'Q1, Feb 2022',
 			materials: 'Acryl auf Leinwand, 40 x 50 cm',
-			description: 'Nach der kunstgeschichtlichen Auseinandersetzung mit Stillleben verschiedender Epochen, erprobten und entwickelten die Schülerinnen einen eigenen Stil und setzten diesen in ihrem individuellen Stillleben um.'
+			description: 'Nach der kunstgeschichtlichen Auseinandersetzung mit Stillleben verschiedener Epochen, erprobten und entwickelten die Schülerinnen einen eigenen Stil und setzten diesen in ihrem individuellen Stillleben um.'
 		},
 		{
 			title: 'Ausstellungsraum',
 			dir: 'Ausstellungsraum',
 			max_image_id: 19,
-			class: 'Q1 Juni 2021',
+			class: 'Q1, Juni 2021',
 			materials: 'Modelle aus Holzpappe und PVC-Folien',
 			description: 'Es sollte ein minimalistisches Einraum-Gebäude entworfen werden, welches an einem spezifischen Ort auf dem Birklehofgelände gebaut werden könnte, um SchülerInnen-Arbeiten auszustellen. Inspirationsquelle dazu war die Arbeit Peter Zumthors, insbesondere das Kunsthaus Bregenz.'
 		},
@@ -50,9 +50,75 @@
 			title: 'Konsumwaren',
 			dir: 'Konsumwaren',
 			max_image_id: 25,
-			class: '10B & 10C Juli 2021',
+			categories: [
+				{
+					title: 'Coca Cola',
+					image_range: [2, 4]
+				},
+				{
+					title: 'KitKat',
+					image_range: [5, 7]
+				},
+				{
+					title: 'Mars',
+					image_range: [8, 8]
+				},
+				{
+					title: 'Mehrbro',
+					image_range: [9, 10]
+				},
+				{
+					title: 'Nesquik',
+					image_range: [11, 13]
+				},
+				{
+					title: 'IPhone',
+					image_range: [14, 16]
+				},
+				{
+					title: 'Sagrotan',
+					image_range: [17, 19]
+				},
+				{
+					title: 'Starbucks',
+					image_range: [20, 22]
+				},
+				{
+					title: 'Lucky Stroke',
+					image_range: [23, 25]
+				}
+			],
+			class: 'Klassen 10B & 10C, Juli 2021',
 			materials: 'Hartschaumskulpturen, Permanentmarker und Acrylfarben, ca. 10 x 15 cm',
 			description: 'Das Material eignet sich gut, um täuschend echte Reproduktionen zu gestalten. Die Aufgabenstellung war, einen Artikel nachzuahmen und in der Bemalung eine kritische Botschaft zu verstecken, die wie das Künstliche des Produkt selbst erst bei näherer Betrachtung offenbart wird.'
+		},
+		{
+			title: 'Workshop',
+			dir: 'Workshop',
+			max_image_id: 17,
+			categories: [
+				{
+					title: 'Fotos',
+					ending: '.jpg',
+					image_range: [1, 9]
+				},
+				{
+					title: 'GIFs',
+					ending: '.GIF',
+					image_range: [10, 17]
+				}
+			],
+			class: '',
+			materials: '',
+			description: 'lorem ipsum'
+		},
+		{
+			title: 'Schmuckstücke',
+			dir: 'Schmuckstuecke',
+			max_image_id: 6,
+			class: 'Q1, Dez 2021',
+			materials: 'Bleistift und Buntstifte, 30 x 50 cm',
+			description: 'Hier war es die Aufgabe, verschiedene künstliche und natürliche Objekte zu arrangieren und die verschiedenen Oberflächenstrukturen möglichst naturalistisch umzusetzen'
 		},
 		{
 			title: 'Möbeldesign',
@@ -61,30 +127,37 @@
 			categories: [
 				{
 					title: 'Bett',
+					ending: '.jpg',
 					image_range: [1, 3]
 				},
 				{
 					title: 'Hochbett',
+					ending: '.jpg',
 					image_range: [4, 8]
 				},
 				{
 					title: 'Regaltisch',
+					ending: '.jpg',
 					image_range: [9, 14]
 				},
 				{
 					title: 'Sofa',
+					ending: '.jpg',
 					image_range: [15, 19]
 				},
 				{
 					title: 'Sofatisch',
+					ending: '.jpg',
 					image_range: [20, 22]
 				},
 				{
 					title: 'Tischbett',
+					ending: '.jpg',
 					image_range: [23, 26]
 				},
 				{
 					title: 'Tischregal',
+					ending: '.jpg',
 					image_range: [27, 30]
 				}
 			],
@@ -96,7 +169,7 @@
 			title: 'Fragmente',
 			dir: 'Fragmente',
 			max_image_id: 6,
-			class: 'Klasse 8 und 9 MuK April 2021',
+			class: 'Klasse 8 und 9 MuK, April 2021',
 			materials: 'Bleistift, Fineliner, Filzstifte, vers. Formate',
 			description: 'Während dem Fernunterricht setzten sich die SchülerInnen mit Bildfragmenten und linearen Zeichnungsformen auseinander. Nach verschiedenen Übungen sollte in Kleingruppen Bilder fragmentiert werden und die jeweiligen Fragmente mit unterschiedlichen linearen Gestaltungsmethoden umgesetzt werden.',
 			style: 'column-count: 2 !important;'
@@ -107,6 +180,46 @@
 			max_image_id: 11,
 			class: 'Klassen 10A & 10B, Nov 2021',
 			materials: 'Bleistift, Fineliner, Kohle, Kreide, Buntstifte, Acryl, Aquarell, Zeichenpapier ca. 35 x 50 cm',
+			description: 'Lernen zu Zeichnen bedeutet vor allem genau hinzusehen, das Auge zu schärfen und zu üben, das Gesehene wiederzugeben. In dieser Studie sollte ein Schuh jeweils linear, mit Fokus auf hell/dunkel, mit naturalistischer Farbgebung und am Ende in einer freien Mischform umgesetzt werden.'
+		},
+		{
+			title: 'Körpergefühl',
+			dir: 'Koerpergefuehl',
+			max_image_id: 22,
+			categories: [
+				{
+					title: 'Chill',
+					ending: '.jpg',
+					image_range: [1, 3]
+				},
+				{
+					title: 'Mutter',
+					ending: '.jpg',
+					image_range: [4, 8]
+				},
+				{
+					title: 'Rund',
+					ending: '.jpg',
+					image_range: [9, 12]
+				},
+				{
+					title: 'Schneider',
+					ending: '.jpg',
+					image_range: [13, 15]
+				},
+				{
+					title: 'Verschränkt',
+					ending: '.jpg',
+					image_range: [16, 17]
+				},
+				{
+					title: 'Zopf',
+					ending: '.jpg',
+					image_range: [18, 22]
+				}
+			],
+			class: 'Klassen 8, Feb 2022',
+			materials: 'Ton',
 			description: 'Lernen zu Zeichnen bedeutet vor allem genau hinzusehen, das Auge zu schärfen und zu üben, das Gesehene wiederzugeben. In dieser Studie sollte ein Schuh jeweils linear, mit Fokus auf hell/dunkel, mit naturalistischer Farbgebung und am Ende in einer freien Mischform umgesetzt werden.'
 		}
 	]
@@ -121,7 +234,7 @@
 
 	{#each subjects as subject}
 		{#if page === '#' + subject.dir}
-			{#if subject.categories !== []}
+			{#if subject.categories && subject.categories !== []}
 				<Subject_Subcategories subject={subject} />
 			{:else}
 				<Subject subject={subject}/>

@@ -89,7 +89,7 @@
     {#each Array(subject.max_image_id) as _, i}
       <div class='brick clickable' on:click={() => {show_image(i)}}>
           <Lazy height={300}>
-            <img src={image_path + (i+1).toString() + '.jpg'} alt='Please wait ... '/>
+            <img src={image_path + (i+1).toString() + '.jpg'} alt=''/>
           </Lazy>
       </div>
     {/each}
