@@ -14,6 +14,7 @@
         class: '',
         materials: '',
         description: '',
+        style: ''
     }
 
     const image_path = 'assets/pictures/' + subject.dir + '/IMG_'
@@ -84,7 +85,7 @@
       </div>
     </div>
   </div>
-  <div class='masonry'>
+  <div class='masonry' style={subject.style}>
     {#each Array(subject.max_image_id) as _, i}
       <div class='brick clickable' on:click={() => {show_image(i)}}>
           <Lazy height={300}>

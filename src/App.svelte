@@ -22,16 +22,16 @@
 			description: 'Wir gingen gemeinsam in den Wald um Skizzen von den Dingen, die auf dem Waldboden zu sehen sind, zu erfassen. Ausgehend von diesen Zeichnungen haben die SchülerInnen begonnen Schicht für Schicht die Waldböden zu malen.'
 		},
 		{
-			title: 'Schwarzwaldlandschaften',
-			dir: 'Schwarzwaldlandschaften',
+			title: 'Schwarzwald',
+			dir: 'Schwarzwald',
 			max_image_id: 10,
 			class: 'Q2 Feb 2022',
 			materials: 'Aquarell auf Papier, ca. 20 x 30 cm',
-			description: 'Raumtiefe entsteht durch Landschaftsebenen, Proportionen und die Luftperspektive (Verblassen und Verblauen von in der Ferne liegenden Bildelementen). In dieser praktischen Arbeit wurden typische Schwarzwald Schwarzwaldlandschaften umgesetzt. '
+			description: 'Raumtiefe entsteht durch Landschaftsebenen, Proportionen und die Luftperspektive (Verblassen und Verblauen von in der Ferne liegenden Bildelementen). In dieser praktischen Arbeit wurden typische Schwarzwald Schwarzwald umgesetzt. '
 		},
 		{
-			title: 'Individuelles Stillleben',
-			dir: 'Individuelles_Stillleben',
+			title: 'Stillleben',
+			dir: 'Stillleben',
 			max_image_id: 5,
 			class: 'Q1 Feb 2022',
 			materials: 'Acryl auf Leinwand, 40 x 50 cm',
@@ -60,12 +60,29 @@
 			class: 'Klasse 6, Feb 2022',
 			materials: 'Modelle aus Holzpappe, Strohhalmen ect, ca. 10 x 15 cm',
 			description: 'Auf spielerische Art und Weise hat sich die Klasse dem Thema Möbeldesign genähert und ein Modell entworfen, welches zwei unterschiedliche Funktionen hat.'
+		},
+		{
+			title: 'Fragmente',
+			dir: 'Fragmente',
+			max_image_id: 6,
+			class: 'Klasse 8 und 9 MuK April 2021',
+			materials: 'Bleistift, Fineliner, Filzstifte, vers. Formate',
+			description: 'Während dem Fernunterricht setzten sich die SchülerInnen mit Bildfragmenten und linearen Zeichnungsformen auseinander. Nach verschiedenen Übungen sollte in Kleingruppen Bilder fragmentiert werden und die jeweiligen Fragmente mit unterschiedlichen linearen Gestaltungsmethoden umgesetzt werden.',
+			style: 'column-count: 2 !important;'
+		},
+		{
+			title: 'Schuhstudie',
+			dir: 'Schuhstudie',
+			max_image_id: 11,
+			class: 'Klassen 10A & 10B, Nov 2021',
+			materials: 'Bleistift, Fineliner, Kohle, Kreide, Buntstifte, Acryl, Aquarell, Zeichenpapier ca. 35 x 50 cm',
+			description: 'Lernen zu Zeichnen bedeutet vor allem genau hinzusehen, das Auge zu schärfen und zu üben, das Gesehene wiederzugeben. In dieser Studie sollte ein Schuh jeweils linear, mit Fokus auf hell/dunkel, mit naturalistischer Farbgebung und am Ende in einer freien Mischform umgesetzt werden.'
 		}
 	]
 </script>
 <main>
 	<div class="toolbar">
-		<img alt="Birklehof | Privates Internat & Gymnasium" style="cursor: pointer" on:click={() => openInNewTab("https://www.birklehof.de/")} id="logo" src="./assets/logo.png">
+		<img alt="Birklehof | Privates Internat & Gymnasium" style="cursor: pointer" on:click={() => openInNewTab("https://www.birklehof.de/")} id="logo" src="./assets/others/logo.png">
 	</div>
 	{#if page==="#Home" || page===""}
 		<Home subjects={subjects}/>

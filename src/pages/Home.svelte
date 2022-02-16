@@ -4,7 +4,7 @@
 
 <div>
   <div class="landing">
-    <img src={"assets/landing/landing.jpg"} alt="Landing">
+    <img src={"assets/others/landing.jpg"} alt="Landing">
     <div class="overlay"></div>
     <h1 class="main-title big-title">Willkommen zur Kunstgalerie</h1>
     <h1 class="main-title big-title">des Birklehof!</h1>
