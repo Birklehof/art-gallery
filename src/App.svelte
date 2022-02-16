@@ -1,6 +1,7 @@
 <script>
 	import Home from "./pages/Home.svelte";
 	import Subject from "./pages/Subject.svelte";
+	import Subject_Subcategories from "./pages/Subject_Subcategories.svelte";
 
 	let page = document.location.hash;
 
@@ -57,6 +58,36 @@
 			title: 'Möbeldesign',
 			dir: 'Moebeldesign',
 			max_image_id: 30,
+			categories: [
+				{
+					title: 'Bett',
+					image_range: [1, 3]
+				},
+				{
+					title: 'Hochbett',
+					image_range: [4, 8]
+				},
+				{
+					title: 'Regaltisch',
+					image_range: [9, 14]
+				},
+				{
+					title: 'Sofa',
+					image_range: [15, 19]
+				},
+				{
+					title: 'Sofatisch',
+					image_range: [20, 22]
+				},
+				{
+					title: 'Tischbett',
+					image_range: [23, 26]
+				},
+				{
+					title: 'Tischregal',
+					image_range: [27, 30]
+				}
+			],
 			class: 'Klasse 6, Feb 2022',
 			materials: 'Modelle aus Holzpappe, Strohhalmen ect, ca. 10 x 15 cm',
 			description: 'Auf spielerische Art und Weise hat sich die Klasse dem Thema Möbeldesign genähert und ein Modell entworfen, welches zwei unterschiedliche Funktionen hat.'
@@ -90,7 +121,11 @@
 
 	{#each subjects as subject}
 		{#if page === '#' + subject.dir}
-			<Subject subject={subject}/>
+			{#if subject.categories !== []}
+				<Subject_Subcategories subject={subject} />
+			{:else}
+				<Subject subject={subject}/>
+			{/if}
 		{/if}
 	{/each}
 </main>

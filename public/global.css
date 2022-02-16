@@ -337,6 +337,14 @@ a {
 	margin: 2rem auto;
 }
 
+.subcategory-header {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3rem;
+	font-size: 2rem;
+}
+
 .masonry .brick {
 	position: relative;
 	background-color: white;
@@ -435,6 +443,9 @@ a {
 		width: 90%;
 		column-count: 2;
 	}
+	.subcategory-header {
+		width: 90%;
+	}
 	.masonry .brick {
 		margin-bottom: 2rem;
 	}
@@ -444,5 +455,8 @@ a {
 	.masonry {
 		width: 70%;
 		column-count: 3;
+	}
+	.subcategory-header {
+		width: 70%;
 	}
 }
