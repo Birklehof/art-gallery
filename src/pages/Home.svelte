@@ -13,9 +13,10 @@
   <div class="landing">
     <img src={"assets/others/landing.jpg"} alt=''>
     <div class="overlay"></div>
-    <h1 class="main-title big-title">Willkommen zur Kunstgalerie</h1>
-    <h1 class="main-title big-title">des Birklehof!</h1>
-    <h1 class="small-title">Willkommen zur Kunstgalerie des Birklehof!</h1>
+    <h1 class="main-title big-title">Willkommen zu</h1>
+    <h1 class="main-title big-title">Kunst am Birklehof</h1>
+    <h1 class="small-title" style="transform: translate(-50%, -74%) !important;">Willkommen zu</h1>
+    <h1 class="small-title">Kunst am Birklehof</h1>
   </div>
   <Masonry
     items={subjects}

@@ -252,6 +252,12 @@
 			title: 'Kunstdiktat',
 			dir: 'Kunstdiktat',
 			max_image_id: 9,
+			categories: [
+				{
+					ending: '.jpg',
+					image_range: [2, 10]
+				}
+			],
 			class: 'Klasse 6 & 9B',
 			materials: 'Bleistifte / Filzstifte, ca. 20 x 30 cm',
 			description: 'Das Kunstdiktat ist eine spielerische Übung zur Bildbetrachtung. Berühmte Werke werden der gegenüber sitzenden Person beschrieben, diese wiederum versucht das Beschriebene zu zeichnen. Beide können die Werke nicht sehen.'
