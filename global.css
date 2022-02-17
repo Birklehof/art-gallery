@@ -82,6 +82,10 @@ body {
 	transform: translate(-50%, -74%);
 }
 
+.main-title {
+	top: 40vh !important;
+}
+
 .main-title::before {
 	background: #004F49;
 	content: "";
@@ -203,8 +207,8 @@ body {
 		display: block;
 		font-size: 2rem;
 		left: 50%;
-		top: 30vh;
-		transform: translate(-50%, -50%);
+		top: 40vh;
+		transform: translate(-50%, 25%) !important;
 		width: auto;
 	}
 	.info .materials {
