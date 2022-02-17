@@ -130,6 +130,7 @@
 			title: 'Fotoworkshop mit Jan von Holleben',
 			dir: 'Workshop',
 			max_image_id: 17,
+			max_title_id: 9,
 			categories: [
 				{
 					ending: '.jpg',
@@ -142,9 +143,7 @@
 			],
 			class: '14 SchülerInnen der Orientierungsstufe, Jan 2022',
 			materials: 'Fotografien und Stop Motion Animationen',
-			description: 'Die BirklehoferInnen hatte während einem Wochenende die Möglichkeit mit dem Fotokünstler Jan von Holleben ihre fantastischen Ideen in Bildern umzusetzen. Dieser Workshop wurde durch die Elisabeth-Schneider-Stiftung möglich gemacht.\n' +
-				'\n' +
-				'©Jan von Holleben 2022'
+			description: 'Die BirklehoferInnen hatte während einem Wochenende die Möglichkeit mit dem Fotokünstler Jan von Holleben ihre fantastischen Ideen in Bildern umzusetzen. Dieser Workshop wurde durch die Elisabeth-Schneider-Stiftung möglich gemacht. Die GIFs am Ende der Seite, brauchen etwas Zeit zum laden, wir bitten deshalb um Geduld. ©Jan von Holleben 2022'
 		},
 		{
 			id: 7,
@@ -221,11 +220,11 @@
 			categories: [
 				{
 					ending: '.jpg',
-					image_range: [1, 3]
+					image_range: [1, 4]
 				},
 				{
 					ending: '.jpg',
-					image_range: [4, 8]
+					image_range: [5, 8]
 				},
 				{
 					ending: '.jpg',
@@ -270,7 +269,7 @@
 	{#each subjects as subject}
 		{#if page === '#' + subject.dir}
 			{#if subject.categories && subject.categories !== []}
-				<Subject_Subcategories subject={subject} />
+				<Subject_Subcategories subject={subject} max_title_id={subject.max_title_id}/>
 			{:else}
 				<Subject subject={subject}/>
 			{/if}

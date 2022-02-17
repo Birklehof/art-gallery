@@ -21,6 +21,7 @@
 
     const image_path = 'assets/pictures/' + subject.dir + '/IMG_'
     let curr_image_id = 0
+    export let max_title_id = subject.max_image_id
 
     export let minColWidth = 400;
     export let maxColWidth = 2000;
@@ -66,7 +67,7 @@
 
 <div>
   <div class='landing'>
-    <img src={image_path + ((Math.floor(Math.random() * (subject.max_image_id-1)))+1).toString() + '.jpg'} alt='Landing'>
+    <img src={image_path + ((Math.floor(Math.random() * (max_title_id-1)))+1).toString() + '.jpg'} alt='Landing'>
     <div class='overlay'></div>
     <h1 class='big-title'>{subject.title}</h1>
     <h1 class='small-title'>{subject.title}</h1>

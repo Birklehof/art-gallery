@@ -4,12 +4,12 @@
 
 ::-moz-selection {
 	color: white;
-	background: #710c34;
+	background: #004F49;
 }
 
 ::selection {
 	color: white;
-	background: #710c34;
+	background: #004F49;
 }
 
 html {
@@ -58,8 +58,8 @@ body {
 	left: 0;
 	height: 70vh;
 	width: 100vw;
-	object-fit: contain;
-	background-color: #710c34;
+	object-fit: cover;
+	background-color: white;
 }
 
 .landing h1 {
@@ -83,7 +83,7 @@ body {
 }
 
 .main-title::before {
-	background: #710c34;
+	background: #004F49;
 	content: "";
 	inset: 0;
 	position: absolute;
@@ -167,7 +167,7 @@ body {
 
 .landing .back-link:hover {
 	background-color: white;
-	color: #710c34;
+	color: #004F49;
 }
 
 @media screen and (max-height: 800px) {
@@ -213,9 +213,9 @@ body {
 }
 
 a {
-	color: #710c34;
+	color: #004F49;
 	position: relative;
-	border-bottom: #710c34;
+	border-bottom: #004F49;
 }
 
 .clickable {
@@ -421,12 +421,12 @@ a {
 }
 
 .hover-effect h1:hover {
-	color: #710c34 !important;
+	color: #004F49 !important;
 	background-color: white;
 }
 
 .hover-effect h1:hover a {
-	color: #710c34 !important;
+	color: #004F49 !important;
 }
 
 .hover-effect a {
@@ -441,7 +441,7 @@ a {
 }
 
 .hover-effect a:hover {
-	color: #710c34 !important;
+	color: #004F49 !important;
 }
 
 .hover-effect p {
