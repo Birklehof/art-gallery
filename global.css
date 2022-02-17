@@ -63,6 +63,8 @@ body {
 }
 
 .landing h1 {
+	padding-left: 13px;
+	padding-right: 13px;
 	width: max-content;
 	position: absolute;
 	left: 50%;
@@ -330,20 +332,52 @@ a {
 }
 
 .masonry {
+	margin: auto;
 	transition: all .5s ease-in-out;
 }
 
-@media only screen and (min-width: 750px) {
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
 	.masonry {
-		margin: 3rem auto 6rem;
 		width: 90%;
-		column-count: 2;
+		margin-top: 2rem;
+		margin-bottom: 4rem;
 	}
 }
 
-@media only screen and (min-width: 1700px) {
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+	.masonry {
+		width: 90%;
+		margin-top: 2rem;
+		margin-bottom: 4rem;
+	}
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+	.masonry {
+		width: 90%;
+		margin-top: 2rem;
+		margin-bottom: 4rem;
+	}
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
 	.masonry {
 		width: 70%;
+		margin-top: 3rem;
+		margin-bottom: 6rem;
+	}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+	.masonry {
+		width: 70%;
+		margin-top: 3rem;
+		margin-bottom: 6rem;
 	}
 }
 
