@@ -13,7 +13,6 @@
 		window.open(url, '_blank').focus();
 	}
 
-	// TODO bessere Version des Stilllebens
 	// TODO Schuhe von links nach rechts
 
 	const subjects = [
@@ -23,7 +22,7 @@
 			max_image_id: 9,
 			class: 'Klasse 7, Dezember 2021',
 			materials: 'Acryl auf Papier, ca. 40 x 40 cm',
-			description: 'Wir gingen gemeinsam in den Wald um Skizzen von den Dingen, die auf dem Waldboden zu sehen sind, zu erfassen. Ausgehend von diesen Zeichnungen haben die SchülerInnen begonnen Schicht für Schicht die Waldböden zu malen.'
+			description: 'Wir gingen gemeinsam in den Wald um Skizzen von den organischen Gegenständen, die auf dem Waldboden zu sehen sind, zu erfassen. Ausgehend von diesen Zeichnungen haben die SchülerInnen begonnen Schicht für Schicht die Waldböden zu malen.'
 		},
 		{
 			title: 'Schwarzwald',
@@ -31,7 +30,7 @@
 			max_image_id: 10,
 			class: 'Q2, Feb 2022',
 			materials: 'Aquarell auf Papier, ca. 20 x 30 cm',
-			description: 'Raumtiefe entsteht durch Landschaftsebenen, Proportionen und die Luftperspektive (Verblassen und Verblauen von in der Ferne liegenden Bildelementen). In dieser praktischen Arbeit wurden typische Schwarzwald Schwarzwald umgesetzt. '
+			description: 'Raumtiefe entsteht durch Landschaftsebenen, Proportionen und die Luftperspektive (Verblassen und Verblauen von in der Ferne liegenden Bildelementen). In dieser praktischen Arbeit wurden typische Schwarzwaldlandschaften umgesetzt. '
 		},
 		{
 			title: 'Stillleben',
@@ -45,6 +44,32 @@
 			title: 'Ausstellungsraum',
 			dir: 'Ausstellungsraum',
 			max_image_id: 19,
+			categories: [
+				{
+					ending: '.jpg',
+					image_range: [1, 3]
+				},
+				{
+					ending: '.jpg',
+					image_range: [4, 7]
+				},
+				{
+					ending: '.jpg',
+					image_range: [8, 8]
+				},
+				{
+					ending: '.jpg',
+					image_range: [9, 13]
+				},
+				{
+					ending: '.jpg',
+					image_range: [14, 16]
+				},
+				{
+					ending: '.jpg',
+					image_range: [17, 19]
+				},
+			],
 			class: 'Q1, Juni 2021',
 			materials: 'Modelle aus Holzpappe und PVC-Folien',
 			description: 'Es sollte ein minimalistisches Einraum-Gebäude entworfen werden, welches an einem spezifischen Ort auf dem Birklehofgelände gebaut werden könnte, um SchülerInnen-Arbeiten auszustellen. Inspirationsquelle dazu war die Arbeit Peter Zumthors, insbesondere das Kunsthaus Bregenz.'
@@ -55,74 +80,65 @@
 			max_image_id: 25,
 			categories: [
 				{
-					title: 'Coca Cola',
 					ending: '.jpg',
 					image_range: [2, 4]
 				},
 				{
-					title: 'KitKat',
 					ending: '.jpg',
 					image_range: [5, 7]
 				},
 				{
-					title: 'Mars',
 					ending: '.jpg',
 					image_range: [8, 8]
 				},
 				{
-					title: 'Mehrbro',
 					ending: '.jpg',
 					image_range: [9, 10]
 				},
 				{
-					title: 'Nesquik',
 					ending: '.jpg',
 					image_range: [11, 13]
 				},
 				{
-					title: 'IPhone',
 					ending: '.jpg',
 					image_range: [14, 16]
 				},
 				{
-					title: 'Sagrotan',
 					ending: '.jpg',
 					image_range: [17, 19]
 				},
 				{
-					title: 'Starbucks',
 					ending: '.jpg',
 					image_range: [20, 22]
 				},
 				{
-					title: 'Lucky Stroke',
 					ending: '.jpg',
 					image_range: [23, 25]
 				}
 			],
 			class: 'Klassen 10B & 10C, Juli 2021',
 			materials: 'Hartschaumskulpturen, Permanentmarker und Acrylfarben, ca. 10 x 15 cm',
-			description: 'Das Material eignet sich gut, um täuschend echte Reproduktionen zu gestalten. Die Aufgabenstellung war, einen Artikel nachzuahmen und in der Bemalung eine kritische Botschaft zu verstecken, die wie das Künstliche des Produkt selbst erst bei näherer Betrachtung offenbart wird.'
+			description: 'Das Material eignet sich gut, um täuschend echte Reproduktionen zu gestalten. Die Aufgabenstellung war, einen Artikel nachzuahmen und in der Bemalung eine kritische Botschaft zu verstecken, die wie das Künstliche des Produkt selbst, erst bei näherer Betrachtung offenbart wird.'
 		},
 		{
-			title: 'Workshop',
+			title: 'Fotoworkshop mit Jan von Holleben',
 			dir: 'Workshop',
 			max_image_id: 17,
 			categories: [
 				{
-					title: 'Fotos',
 					ending: '.jpg',
 					image_range: [1, 9]
 				},
 				{
-					title: 'GIFs',
 					ending: '.GIF',
 					image_range: [10, 17]
 				}
 			],
-			class: '',
-			materials: '',
-			description: 'lorem ipsum'
+			class: '14 SchülerInnen der Orientierungsstufe, Jan 2022',
+			materials: 'Fotografien und Stop Motion Animationen',
+			description: 'Die BirklehoferInnen hatte während einem Wochenende die Möglichkeit mit dem Fotokünstler Jan von Holleben ihre fantastischen Ideen in Bildern umzusetzen. Dieser Workshop wurde durch die Elisabeth-Schneider-Stiftung möglich gemacht.\n' +
+				'\n' +
+				'©Jan von Holleben 2022'
 		},
 		{
 			title: 'Schmuckstücke',
@@ -138,37 +154,30 @@
 			max_image_id: 30,
 			categories: [
 				{
-					title: 'Bett',
 					ending: '.jpg',
 					image_range: [1, 3]
 				},
 				{
-					title: 'Hochbett',
 					ending: '.jpg',
 					image_range: [4, 8]
 				},
 				{
-					title: 'Regaltisch',
 					ending: '.jpg',
 					image_range: [9, 14]
 				},
 				{
-					title: 'Sofa',
 					ending: '.jpg',
 					image_range: [15, 19]
 				},
 				{
-					title: 'Sofatisch',
 					ending: '.jpg',
 					image_range: [20, 22]
 				},
 				{
-					title: 'Tischbett',
 					ending: '.jpg',
 					image_range: [23, 26]
 				},
 				{
-					title: 'Tischregal',
 					ending: '.jpg',
 					image_range: [27, 30]
 				}
@@ -200,39 +209,41 @@
 			max_image_id: 22,
 			categories: [
 				{
-					title: 'Chill',
 					ending: '.jpg',
 					image_range: [1, 3]
 				},
 				{
-					title: 'Mutter',
 					ending: '.jpg',
 					image_range: [4, 8]
 				},
 				{
-					title: 'Rund',
 					ending: '.jpg',
 					image_range: [9, 12]
 				},
 				{
-					title: 'Schneider',
 					ending: '.jpg',
 					image_range: [13, 15]
 				},
 				{
-					title: 'Verschränkt',
 					ending: '.jpg',
 					image_range: [16, 17]
 				},
 				{
-					title: 'Zopf',
 					ending: '.jpg',
 					image_range: [18, 22]
 				}
 			],
 			class: 'Klassen 8, Feb 2022',
 			materials: 'Ton',
-			description: 'Lernen zu Zeichnen bedeutet vor allem genau hinzusehen, das Auge zu schärfen und zu üben, das Gesehene wiederzugeben. In dieser Studie sollte ein Schuh jeweils linear, mit Fokus auf hell/dunkel, mit naturalistischer Farbgebung und am Ende in einer freien Mischform umgesetzt werden.'
+			description: 'Ein bestimmtes Gefühl sollte bei diesen Arbeiten über die Körperhaltung der Figuren zum Ausdruck gebracht werden.'
+		},
+		{
+			title: 'Kunstdiktat',
+			dir: 'Kunstdiktat',
+			max_image_id: 9,
+			class: 'Klasse 6 & 9B',
+			materials: 'Bleistifte / Filzstifte, ca. 20 x 30 cm',
+			description: 'Das Kunstdiktat ist eine spielerische Übung zur Bildbetrachtung. Berühmte Werke werden der gegenüber sitzenden Person beschrieben, diese wiederum versucht das Beschriebene zu zeichnen. Beide können die Werke nicht sehen.'
 		}
 	]
 </script>

@@ -101,7 +101,6 @@
   </div>
 
     {#each subject.categories as category}
-      <h2 class="subcategory-header">{category.title}</h2>
       <div class='masonry' style={subject.style}>
         {#each Array(category.image_range[1]-category.image_range[0]+1) as _, j}
           <div class='brick clickable' on:click={() => {show_image(j+category.image_range[0]-1, category.ending)}}>
