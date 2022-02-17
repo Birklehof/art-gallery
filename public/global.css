@@ -4,12 +4,12 @@
 
 ::-moz-selection {
 	color: white;
-	background: #004F49;
+	background: #710c34;
 }
 
 ::selection {
 	color: white;
-	background: #004F49;
+	background: #710c34;
 }
 
 html {
@@ -28,7 +28,7 @@ body {
 	width: 100vw;
 	z-index: 50;
 	background-color: white;
-	height: 8%;
+	height: 5rem;
 }
 
 #logo {
@@ -40,7 +40,7 @@ body {
 .overlay {
 	content: "";
 	position: absolute;
-	top: 0;
+	top: 5rem;
 	left: 0;
 	height: 70vh;
 	width: 100vw;
@@ -48,18 +48,18 @@ body {
 }
 
 .landing {
-	top: 8%;
+	margin-top: 5rem;
 	height: 70vh;
 	width: 100vw;
 }
 
 .landing img {
-	position: absolute;
-	top: 0;
+	top: 5rem;
 	left: 0;
 	height: 70vh;
 	width: 100vw;
-	object-fit: cover;
+	object-fit: contain;
+	background-color: #710c34;
 }
 
 .landing h1 {
@@ -83,7 +83,7 @@ body {
 }
 
 .main-title::before {
-	background: #691542;
+	background: #710c34;
 	content: "";
 	inset: 0;
 	position: absolute;
@@ -167,7 +167,7 @@ body {
 
 .landing .back-link:hover {
 	background-color: white;
-	color: #004F49;
+	color: #710c34;
 }
 
 @media screen and (max-height: 800px) {
@@ -213,9 +213,9 @@ body {
 }
 
 a {
-	color: #004F49;
+	color: #710c34;
 	position: relative;
-	border-bottom: #004F49;
+	border-bottom: #710c34;
 }
 
 .clickable {
@@ -224,7 +224,7 @@ a {
 
 #overlay {
 	position: fixed;
-	top: 0;
+	top: 5rem;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
@@ -421,12 +421,12 @@ a {
 }
 
 .hover-effect h1:hover {
-	color: #004F49 !important;
+	color: #710c34 !important;
 	background-color: white;
 }
 
 .hover-effect h1:hover a {
-	color: #004F49 !important;
+	color: #710c34 !important;
 }
 
 .hover-effect a {
@@ -441,7 +441,7 @@ a {
 }
 
 .hover-effect a:hover {
-	color: #004F49 !important;
+	color: #710c34 !important;
 }
 
 .hover-effect p {
