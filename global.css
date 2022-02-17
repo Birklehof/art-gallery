@@ -331,11 +331,6 @@ a {
 
 .masonry {
 	transition: all .5s ease-in-out;
-	column-gap: calc(2rem - 10px);
-	column-fill: initial;
-	width: calc(100% - 2rem);
-	margin: 1rem 1rem 3rem;
-	column-count: 1;
 }
 
 @media only screen and (min-width: 750px) {
@@ -344,19 +339,15 @@ a {
 		width: 90%;
 		column-count: 2;
 	}
-	.masonry .brick {
-		margin-bottom: 2rem;
-	}
 }
 
 @media only screen and (min-width: 1700px) {
 	.masonry {
 		width: 70%;
-		column-count: 3;
 	}
 }
 
-.masonry .brick {
+.brick {
 	position: relative;
 	background-color: white;
 	margin: 10px 10px 1rem;
@@ -367,7 +358,7 @@ a {
 	border-radius: 4px;
 }
 
-.masonry .brick img {
+.brick img {
 	float: right;
 	max-width: 100%;
 	transition: all .5s ease;
@@ -376,11 +367,11 @@ a {
 	border-radius: 2px;
 }
 
-.masonry .hover-effect:hover img {
+.hover-effect:hover img {
 	opacity: .5;
 }
 
-.masonry .hover-effect h1 {
+.hover-effect h1 {
 	font-size: 1.7rem;
 	margin: 0;
 	padding: 20px 20px 2px;
@@ -395,16 +386,16 @@ a {
 	border-bottom: 2px solid transparent;
 }
 
-.masonry .hover-effect h1:hover {
+.hover-effect h1:hover {
 	color: #004F49 !important;
 	background-color: white;
 }
 
-.masonry .hover-effect h1:hover a {
+.hover-effect h1:hover a {
 	color: #004F49 !important;
 }
 
-.masonry .hover-effect a {
+.hover-effect a {
 	display: block;
 	padding: 3px;
 	color: transparent;
@@ -415,11 +406,11 @@ a {
 	text-decoration: none;
 }
 
-.masonry .hover-effect a:hover {
+.hover-effect a:hover {
 	color: #004F49 !important;
 }
 
-.masonry .hover-effect p {
+.hover-effect p {
 	margin: 4.5rem 20px 20px;
 	position: absolute;
 	background-color: transparent;
@@ -432,10 +423,10 @@ a {
 	text-overflow: ellipsis;
 }
 
-.masonry .hover-effect:hover a, .masonry .hover-effect:hover h1, .masonry .hover-effect:hover p {
+.hover-effect:hover a, .hover-effect:hover h1, .hover-effect:hover p {
 	color: white;
 }
 
-.masonry .hover-effect:hover h1 {
+.hover-effect:hover h1 {
 	border-bottom: 2px solid white;
 }
