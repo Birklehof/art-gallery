@@ -28,9 +28,9 @@
     bind:height
   >
     <div class="brick hover-effect" style="background-color: black">
-      <Lazy height={300}>
-        <img src={"assets/pictures/" + item.dir + "/IMG_1.jpg"} alt=''>
-      </Lazy>
+<!--      <Lazy height={300}>-->
+      <img src={"assets/pictures/" + item.dir + "/IMG_1.jpg"} alt=''>
+<!--      </Lazy>-->
       <h1><a href={'#' + item.dir}>
         {item.title}</a></h1>
       <p>{item.description}</p>
