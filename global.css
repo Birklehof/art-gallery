@@ -330,19 +330,30 @@ a {
 }
 
 .masonry {
-	width: 70%;
 	transition: all .5s ease-in-out;
 	column-gap: calc(2rem - 10px);
 	column-fill: initial;
-	margin: 2rem auto;
+	width: calc(100% - 2rem);
+	margin: 1rem 1rem 3rem;
+	column-count: 1;
 }
 
-.subcategory-header {
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 3rem;
-	font-size: 2rem;
+@media only screen and (min-width: 750px) {
+	.masonry {
+		margin: 3rem auto 4rem;
+		width: 90%;
+		column-count: 2;
+	}
+	.masonry .brick {
+		margin-bottom: 2rem;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	.masonry {
+		width: 70%;
+		column-count: 3;
+	}
 }
 
 .masonry .brick {
@@ -427,36 +438,4 @@ a {
 
 .masonry .hover-effect:hover h1 {
 	border-bottom: 2px solid white;
-}
-
-.masonry {
-	margin-left: 1rem;
-	width: calc(100% - 2rem);
-	margin-right: 1rem;
-	margin-top: 1rem;
-	column-count: 1;
-}
-
-@media only screen and (min-width: 750px) {
-	.masonry {
-		margin: 2rem auto;
-		width: 90%;
-		column-count: 2;
-	}
-	.subcategory-header {
-		width: 90%;
-	}
-	.masonry .brick {
-		margin-bottom: 2rem;
-	}
-}
-
-@media only screen and (min-width: 1700px) {
-	.masonry {
-		width: 70%;
-		column-count: 3;
-	}
-	.subcategory-header {
-		width: 70%;
-	}
 }
