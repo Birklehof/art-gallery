@@ -51,11 +51,11 @@
 			categories: [
 				{
 					ending: '.jpg',
-					image_range: [1, 3]
+					image_range: [1, 4]
 				},
 				{
 					ending: '.jpg',
-					image_range: [4, 7]
+					image_range: [5, 7]
 				},
 				{
 					ending: '.jpg',
@@ -220,11 +220,11 @@
 			categories: [
 				{
 					ending: '.jpg',
-					image_range: [1, 4]
+					image_range: [1, 3]
 				},
 				{
 					ending: '.jpg',
-					image_range: [5, 8]
+					image_range: [4, 8]
 				},
 				{
 					ending: '.jpg',
