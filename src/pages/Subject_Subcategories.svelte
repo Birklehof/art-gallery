@@ -23,7 +23,7 @@
     let curr_image_id = 0
 
     export let minColWidth = 400;
-    export let maxColWidth = 800;
+    export let maxColWidth = 2000;
     export let gap = 20;
     let width, height;
 

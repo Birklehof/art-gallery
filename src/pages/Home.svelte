@@ -11,7 +11,7 @@
 
 <div>
   <div class="landing">
-    <img src={"assets/others/landing.jpg"} alt=''>
+    <img src={"assets/others/landing_alt.png"} alt=''>
     <div class="overlay"></div>
     <h1 class="main-title big-title">Willkommen zur Kunstgalerie</h1>
     <h1 class="main-title big-title">des Birklehof!</h1>
