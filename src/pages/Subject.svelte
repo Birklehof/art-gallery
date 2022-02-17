@@ -3,6 +3,7 @@
     import IoIosArrowForward from 'svelte-icons/io/IoIosArrowForward.svelte';
     import IoIosClose from 'svelte-icons/io/IoIosClose.svelte';
     import Lazy from 'svelte-lazy';
+    import Masonry from 'svelte-bricks'
     import { onMount } from 'svelte';
 
     onMount(() => window.scrollTo(0,0));
@@ -19,6 +20,11 @@
 
     const image_path = 'assets/pictures/' + subject.dir + '/IMG_'
     let curr_image_id = 0
+
+    export let minColWidth = 400;
+    export let maxColWidth = 800;
+    export let gap = 20;
+    let width, height;
 
     function show_image(image_id) {
         curr_image_id = image_id+1;
@@ -85,13 +91,19 @@
       </div>
     </div>
   </div>
-  <div class='masonry' style={subject.style}>
-    {#each Array(subject.max_image_id) as _, i}
-      <div class='brick clickable' on:click={() => {show_image(i)}}>
-          <Lazy height={300}>
-            <img src={image_path + (i+1).toString() + '.jpg'} alt=''/>
-          </Lazy>
-      </div>
-    {/each}
-  </div>
+  <Masonry
+    items={[...Array(subject.max_image_id).keys()]}
+    {minColWidth}
+    {maxColWidth}
+    {gap}
+    let:item
+    bind:width
+    bind:height
+  >
+    <div class='brick clickable' on:click={() => {show_image(item)}}>
+      <Lazy height={300}>
+        <img src={image_path + (item+1).toString() + '.jpg'} alt=''/>
+      </Lazy>
+    </div>
+  </Masonry>
 </div>

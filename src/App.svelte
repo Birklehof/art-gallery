@@ -17,6 +17,7 @@
 
 	const subjects = [
 		{
+			id: 1,
 			title: 'Waldboden',
 			dir: 'Waldboden',
 			max_image_id: 9,
@@ -25,6 +26,7 @@
 			description: 'Wir gingen gemeinsam in den Wald um Skizzen von den organischen Gegenständen, die auf dem Waldboden zu sehen sind, zu erfassen. Ausgehend von diesen Zeichnungen haben die SchülerInnen begonnen Schicht für Schicht die Waldböden zu malen.'
 		},
 		{
+			id: 2,
 			title: 'Schwarzwald',
 			dir: 'Schwarzwald',
 			max_image_id: 10,
@@ -33,6 +35,7 @@
 			description: 'Raumtiefe entsteht durch Landschaftsebenen, Proportionen und die Luftperspektive (Verblassen und Verblauen von in der Ferne liegenden Bildelementen). In dieser praktischen Arbeit wurden typische Schwarzwaldlandschaften umgesetzt. '
 		},
 		{
+			id: 3,
 			title: 'Stillleben',
 			dir: 'Stillleben',
 			max_image_id: 5,
@@ -41,6 +44,7 @@
 			description: 'Nach der kunstgeschichtlichen Auseinandersetzung mit Stillleben verschiedener Epochen, erprobten und entwickelten die Schülerinnen einen eigenen Stil und setzten diesen in ihrem individuellen Stillleben um.'
 		},
 		{
+			id: 4,
 			title: 'Ausstellungsraum',
 			dir: 'Ausstellungsraum',
 			max_image_id: 19,
@@ -75,6 +79,7 @@
 			description: 'Es sollte ein minimalistisches Einraum-Gebäude entworfen werden, welches an einem spezifischen Ort auf dem Birklehofgelände gebaut werden könnte, um SchülerInnen-Arbeiten auszustellen. Inspirationsquelle dazu war die Arbeit Peter Zumthors, insbesondere das Kunsthaus Bregenz.'
 		},
 		{
+			id: 5,
 			title: 'Konsumwaren',
 			dir: 'Konsumwaren',
 			max_image_id: 25,
@@ -121,6 +126,7 @@
 			description: 'Das Material eignet sich gut, um täuschend echte Reproduktionen zu gestalten. Die Aufgabenstellung war, einen Artikel nachzuahmen und in der Bemalung eine kritische Botschaft zu verstecken, die wie das Künstliche des Produkt selbst, erst bei näherer Betrachtung offenbart wird.'
 		},
 		{
+			id: 6,
 			title: 'Fotoworkshop mit Jan von Holleben',
 			dir: 'Workshop',
 			max_image_id: 17,
@@ -141,6 +147,7 @@
 				'©Jan von Holleben 2022'
 		},
 		{
+			id: 7,
 			title: 'Schmuckstücke',
 			dir: 'Schmuckstuecke',
 			max_image_id: 6,
@@ -149,6 +156,7 @@
 			description: 'Hier war es die Aufgabe, verschiedene künstliche und natürliche Objekte zu arrangieren und die verschiedenen Oberflächenstrukturen möglichst naturalistisch umzusetzen'
 		},
 		{
+			id: 8,
 			title: 'Möbeldesign',
 			dir: 'Moebeldesign',
 			max_image_id: 30,
@@ -187,6 +195,7 @@
 			description: 'Auf spielerische Art und Weise hat sich die Klasse dem Thema Möbeldesign genähert und ein Modell entworfen, welches zwei unterschiedliche Funktionen hat.'
 		},
 		{
+			id: 9,
 			title: 'Fragmente',
 			dir: 'Fragmente',
 			max_image_id: 6,
@@ -196,6 +205,7 @@
 			style: 'column-count: 2 !important;'
 		},
 		{
+			id: 10,
 			title: 'Schuhstudie',
 			dir: 'Schuhstudie',
 			max_image_id: 11,
@@ -204,6 +214,7 @@
 			description: 'Lernen zu Zeichnen bedeutet vor allem genau hinzusehen, das Auge zu schärfen und zu üben, das Gesehene wiederzugeben. In dieser Studie sollte ein Schuh jeweils linear, mit Fokus auf hell/dunkel, mit naturalistischer Farbgebung und am Ende in einer freien Mischform umgesetzt werden.'
 		},
 		{
+			id: 11,
 			title: 'Körpergefühl',
 			dir: 'Koerpergefuehl',
 			max_image_id: 22,
@@ -238,6 +249,7 @@
 			description: 'Ein bestimmtes Gefühl sollte bei diesen Arbeiten über die Körperhaltung der Figuren zum Ausdruck gebracht werden.'
 		},
 		{
+			id: 12,
 			title: 'Kunstdiktat',
 			dir: 'Kunstdiktat',
 			max_image_id: 9,

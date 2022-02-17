@@ -789,6 +789,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+svelte-bricks@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/svelte-bricks/-/svelte-bricks-0.1.4.tgz#c1078fcb18b56575e176e10a75c7148f72819668"
+  integrity sha512-MMN22Z+2SxEjncITmjIqbNZNoGBOnYNql6MvskVyO1UlfMcjlzHEKMNh04Aikp6EceMf6jj/Fw2Y3iq9U5xF7A==
+
 svelte-icons@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/svelte-icons/-/svelte-icons-2.1.0.tgz#6f2ec72f1d5c8b2de1a4b8a822c95bcb2f701aca"

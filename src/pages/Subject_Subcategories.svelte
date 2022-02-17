@@ -3,6 +3,7 @@
     import IoIosArrowForward from 'svelte-icons/io/IoIosArrowForward.svelte';
     import IoIosClose from 'svelte-icons/io/IoIosClose.svelte';
     import Lazy from 'svelte-lazy';
+    import Masonry from 'svelte-bricks'
     import { onMount } from 'svelte';
 
     onMount(() => window.scrollTo(0,0));
@@ -20,6 +21,11 @@
 
     const image_path = 'assets/pictures/' + subject.dir + '/IMG_'
     let curr_image_id = 0
+
+    export let minColWidth = 400;
+    export let maxColWidth = 800;
+    export let gap = 20;
+    let width, height;
 
     function show_image(image_id, ending='.jpg') {
         document.getElementById('focus_image').src = ''
@@ -101,14 +107,20 @@
   </div>
 
     {#each subject.categories as category}
-      <div class='masonry' style={subject.style}>
-        {#each Array(category.image_range[1]-category.image_range[0]+1) as _, j}
-          <div class='brick clickable' on:click={() => {show_image(j+category.image_range[0]-1, category.ending)}}>
-            <Lazy height={300}>
-              <img src={image_path + (j+category.image_range[0]).toString() + category.ending} alt='Please wait ... '/>
-            </Lazy>
-          </div>
-        {/each}
-      </div>
+      <Masonry
+        items={[...Array(category.image_range[1]-category.image_range[0]+1).keys()]}
+        {minColWidth}
+        {maxColWidth}
+        {gap}
+        let:item
+        bind:width
+        bind:height
+      >
+        <div class='brick clickable' on:click={() => {show_image(item+category.image_range[0]-1, category.ending)}}>
+          <Lazy height={300}>
+            <img src={image_path + (item+category.image_range[0]).toString() + category.ending} alt='Please wait ... '/>
+          </Lazy>
+        </div>
+      </Masonry>
     {/each}
 </div>
