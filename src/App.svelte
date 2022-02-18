@@ -127,7 +127,7 @@
 		},
 		{
 			id: 6,
-			title: 'Fotoworkshop mit Jan von Holleben',
+			title: 'Fotoworkshop',
 			dir: 'Workshop',
 			max_image_id: 17,
 			max_title_id: 9,
