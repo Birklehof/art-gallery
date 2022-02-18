@@ -337,7 +337,6 @@ a {
 
 .masonry {
 	margin: auto;
-	transition: all .5s ease-in-out;
 }
 
 /* Media Query for Mobile Devices */
