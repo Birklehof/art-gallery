@@ -1,5 +1,4 @@
 <script>
-    import Lazy from "svelte-lazy";
     import Masonry from 'svelte-bricks';
 
     export let subjects = [];
@@ -27,12 +26,9 @@
     bind:width
     bind:height
   >
-    <div class="brick hover-effect" style="background-color: black">
-<!--      <Lazy height={300}>-->
+    <div class="brick hover-effect clickable" style="background-color: black" on:click={document.location = '#' + item.dir}>
       <img src={"assets/pictures/" + item.dir + "/IMG_1.jpg"} alt=''>
-<!--      </Lazy>-->
-      <h1><a href={'#' + item.dir}>
-        {item.title}</a></h1>
+      <h1>{item.title}</h1>
       <p>{item.description}</p>
     </div>
   </Masonry>
