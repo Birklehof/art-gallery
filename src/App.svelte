@@ -127,26 +127,6 @@
 		},
 		{
 			id: 6,
-			title: 'Fotoworkshop',
-			dir: 'Workshop',
-			max_image_id: 17,
-			max_title_id: 9,
-			categories: [
-				{
-					ending: '.jpg',
-					image_range: [1, 9]
-				},
-				{
-					ending: '.GIF',
-					image_range: [10, 17]
-				}
-			],
-			class: '14 SchülerInnen der Orientierungsstufe, Jan 2022',
-			materials: 'Fotografien und Stop Motion Animationen',
-			description: 'Die BirklehoferInnen hatte während einem Wochenende die Möglichkeit mit dem Fotokünstler Jan von Holleben ihre fantastischen Ideen in Bildern umzusetzen. Dieser Workshop wurde durch die Elisabeth-Schneider-Stiftung möglich gemacht. Die GIFs am Ende der Seite, brauchen etwas Zeit zum laden, wir bitten deshalb um Geduld. ©Jan von Holleben 2022'
-		},
-		{
-			id: 7,
 			title: 'Schmuckstücke',
 			dir: 'Schmuckstuecke',
 			max_image_id: 6,
@@ -155,7 +135,7 @@
 			description: 'Hier war es die Aufgabe, verschiedene künstliche und natürliche Objekte zu arrangieren und die verschiedenen Oberflächenstrukturen möglichst naturalistisch umzusetzen'
 		},
 		{
-			id: 8,
+			id: 7,
 			title: 'Möbeldesign',
 			dir: 'Moebeldesign',
 			max_image_id: 30,
@@ -194,7 +174,7 @@
 			description: 'Auf spielerische Art und Weise hat sich die Klasse dem Thema Möbeldesign genähert und ein Modell entworfen, welches zwei unterschiedliche Funktionen hat.'
 		},
 		{
-			id: 9,
+			id: 8,
 			title: 'Fragmente',
 			dir: 'Fragmente',
 			max_image_id: 6,
@@ -204,7 +184,7 @@
 			style: 'column-count: 2 !important;'
 		},
 		{
-			id: 10,
+			id: 9,
 			title: 'Schuhstudie',
 			dir: 'Schuhstudie',
 			max_image_id: 11,
@@ -213,7 +193,7 @@
 			description: 'Lernen zu Zeichnen bedeutet vor allem genau hinzusehen, das Auge zu schärfen und zu üben, das Gesehene wiederzugeben. In dieser Studie sollte ein Schuh jeweils linear, mit Fokus auf hell/dunkel, mit naturalistischer Farbgebung und am Ende in einer freien Mischform umgesetzt werden.'
 		},
 		{
-			id: 11,
+			id: 10,
 			title: 'Körpergefühl',
 			dir: 'Koerpergefuehl',
 			max_image_id: 22,
@@ -248,7 +228,7 @@
 			description: 'Ein bestimmtes Gefühl sollte bei diesen Arbeiten über die Körperhaltung der Figuren zum Ausdruck gebracht werden.'
 		},
 		{
-			id: 12,
+			id: 11,
 			title: 'Kunstdiktat',
 			dir: 'Kunstdiktat',
 			max_image_id: 9,
